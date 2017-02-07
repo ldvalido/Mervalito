@@ -1526,6 +1526,30 @@
     <TypeScriptCompile Include="Modules\Common\Helpers\BasicProgressDialog.ts" />
     <TypeScriptCompile Include="Modules\Common\Helpers\BulkServiceAction.ts" />
     <TypeScriptCompile Include="Scripts\typings\serenity\Serenity.CoreLib.d.ts" />
+    <Content Include="Modules\MasterData\Currency\CurrencyIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.CurrencyRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.CurrencyService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.CurrencyForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Currency\CurrencyGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Currency\CurrencyDialog.ts" />
+    <Content Include="Modules\MasterData\PaymentPeriod\PaymentPeriodIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.PaymentPeriodRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.PaymentPeriodService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.PaymentPeriodForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodDialog.ts" />
+    <Content Include="Modules\MasterData\Title\TitleIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Title\TitleGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Title\TitleDialog.ts" />
+    <Content Include="Modules\MasterData\TitleType\TitleTypeIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleTypeRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleTypeService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleTypeForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\TitleType\TitleTypeGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\TitleType\TitleTypeDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1702,6 +1726,30 @@
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRow.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRepository.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionEndpoint.cs" />
+    <Compile Include="Modules\MasterData\Currency\CurrencyRow.cs" />
+    <Compile Include="Modules\MasterData\Currency\CurrencyColumns.cs" />
+    <Compile Include="Modules\MasterData\Currency\CurrencyForm.cs" />
+    <Compile Include="Modules\MasterData\Currency\CurrencyRepository.cs" />
+    <Compile Include="Modules\MasterData\Currency\CurrencyEndpoint.cs" />
+    <Compile Include="Modules\MasterData\Currency\CurrencyPage.cs" />
+    <Compile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodRow.cs" />
+    <Compile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodColumns.cs" />
+    <Compile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodForm.cs" />
+    <Compile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodRepository.cs" />
+    <Compile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodEndpoint.cs" />
+    <Compile Include="Modules\MasterData\PaymentPeriod\PaymentPeriodPage.cs" />
+    <Compile Include="Modules\MasterData\Title\TitleRow.cs" />
+    <Compile Include="Modules\MasterData\Title\TitleColumns.cs" />
+    <Compile Include="Modules\MasterData\Title\TitleForm.cs" />
+    <Compile Include="Modules\MasterData\Title\TitleRepository.cs" />
+    <Compile Include="Modules\MasterData\Title\TitleEndpoint.cs" />
+    <Compile Include="Modules\MasterData\Title\TitlePage.cs" />
+    <Compile Include="Modules\MasterData\TitleType\TitleTypeRow.cs" />
+    <Compile Include="Modules\MasterData\TitleType\TitleTypeColumns.cs" />
+    <Compile Include="Modules\MasterData\TitleType\TitleTypeForm.cs" />
+    <Compile Include="Modules\MasterData\TitleType\TitleTypeRepository.cs" />
+    <Compile Include="Modules\MasterData\TitleType\TitleTypeEndpoint.cs" />
+    <Compile Include="Modules\MasterData\TitleType\TitleTypePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

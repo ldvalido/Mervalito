@@ -436,6 +436,206 @@ declare namespace Mervalito {
         Serial?: string;
     }
 }
+declare namespace Mervalito.MasterData {
+    class CurrencyForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface CurrencyForm {
+        Description: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface CurrencyRow {
+        IdCurrency?: number;
+        Description?: string;
+    }
+    namespace CurrencyRow {
+        const idProperty = "IdCurrency";
+        const nameProperty = "Description";
+        const localTextPrefix = "MasterData.Currency";
+        namespace Fields {
+            const IdCurrency: any;
+            const Description: any;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace CurrencyService {
+        const baseUrl = "MasterData/Currency";
+        function Create(request: Serenity.SaveRequest<CurrencyRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CurrencyRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CurrencyRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CurrencyRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    class PaymentPeriodForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface PaymentPeriodForm {
+        Description: Serenity.StringEditor;
+        Days: Serenity.IntegerEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface PaymentPeriodRow {
+        IdPaymentPeriod?: number;
+        Description?: string;
+        Days?: number;
+    }
+    namespace PaymentPeriodRow {
+        const idProperty = "IdPaymentPeriod";
+        const nameProperty = "Description";
+        const localTextPrefix = "MasterData.PaymentPeriod";
+        namespace Fields {
+            const IdPaymentPeriod: any;
+            const Description: any;
+            const Days: any;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace PaymentPeriodService {
+        const baseUrl = "MasterData/PaymentPeriod";
+        function Create(request: Serenity.SaveRequest<PaymentPeriodRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<PaymentPeriodRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PaymentPeriodRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PaymentPeriodRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface TitleForm {
+        AmortizationDate: Serenity.DateEditor;
+        AmortizationAmmount: Serenity.DecimalEditor;
+        RentDate: Serenity.DateEditor;
+        RentAmmount: Serenity.DecimalEditor;
+        IsLinked: Serenity.BooleanEditor;
+        Price: Serenity.DecimalEditor;
+        IdPaymentPeriod: Serenity.IntegerEditor;
+        StartDate: Serenity.DateEditor;
+        EndDate: Serenity.DateEditor;
+        IdCurrency: Serenity.IntegerEditor;
+        IdTitleType: Serenity.IntegerEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface TitleRow {
+        IdTitle?: number;
+        AmortizationDate?: string;
+        AmortizationAmmount?: number;
+        RentDate?: string;
+        RentAmmount?: number;
+        IsLinked?: boolean;
+        Price?: number;
+        IdPaymentPeriod?: number;
+        StartDate?: string;
+        EndDate?: string;
+        IdCurrency?: number;
+        IdTitleType?: number;
+        IdPaymentPeriodDescription?: string;
+        IdPaymentPeriodDays?: number;
+        IdCurrencyDescription?: string;
+        IdTitleTypeDescription?: string;
+    }
+    namespace TitleRow {
+        const idProperty = "IdTitle";
+        const localTextPrefix = "MasterData.Title";
+        namespace Fields {
+            const IdTitle: any;
+            const AmortizationDate: any;
+            const AmortizationAmmount: any;
+            const RentDate: any;
+            const RentAmmount: any;
+            const IsLinked: any;
+            const Price: any;
+            const IdPaymentPeriod: any;
+            const StartDate: any;
+            const EndDate: any;
+            const IdCurrency: any;
+            const IdTitleType: any;
+            const IdPaymentPeriodDescription: string;
+            const IdPaymentPeriodDays: string;
+            const IdCurrencyDescription: string;
+            const IdTitleTypeDescription: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace TitleService {
+        const baseUrl = "MasterData/Title";
+        function Create(request: Serenity.SaveRequest<TitleRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<TitleRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<TitleRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<TitleRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleTypeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface TitleTypeForm {
+        Description: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface TitleTypeRow {
+        IdTitleType?: number;
+        Description?: string;
+    }
+    namespace TitleTypeRow {
+        const idProperty = "IdTitleType";
+        const nameProperty = "Description";
+        const localTextPrefix = "MasterData.TitleType";
+        namespace Fields {
+            const IdTitleType: any;
+            const Description: any;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace TitleTypeService {
+        const baseUrl = "MasterData/TitleType";
+        function Create(request: Serenity.SaveRequest<TitleTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<TitleTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<TitleTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<TitleTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
 declare namespace Mervalito.Membership {
     class ChangePasswordForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -922,6 +1122,86 @@ declare namespace Mervalito.Common {
     class UserPreferenceStorage implements Serenity.SettingStorage {
         getItem(key: string): string;
         setItem(key: string, data: string): void;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CurrencyDialog extends Serenity.EntityDialog<CurrencyRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CurrencyForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CurrencyGrid extends Serenity.EntityGrid<CurrencyRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CurrencyDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class PaymentPeriodDialog extends Serenity.EntityDialog<PaymentPeriodRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: PaymentPeriodForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class PaymentPeriodGrid extends Serenity.EntityGrid<PaymentPeriodRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof PaymentPeriodDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleDialog extends Serenity.EntityDialog<TitleRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected form: TitleForm;
+        dialogOpen(): void;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleGrid extends Serenity.EntityGrid<TitleRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof TitleDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleTypeDialog extends Serenity.EntityDialog<TitleTypeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: TitleTypeForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleTypeGrid extends Serenity.EntityGrid<TitleTypeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof TitleTypeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
     }
 }
 declare namespace Mervalito.Membership {

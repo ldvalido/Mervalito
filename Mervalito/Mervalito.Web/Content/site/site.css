@@ -7437,3 +7437,39 @@ section.content > .s-DataGrid {
   width: 45%;
   float: right;
 }
+.s-MasterData-CurrencyDialog > .size {
+  width: 650px;
+}
+.s-MasterData-CurrencyDialog .caption {
+  width: 150px;
+}
+.s-MasterData-PaymentPeriodDialog > .size {
+  width: 650px;
+}
+.s-MasterData-PaymentPeriodDialog .caption {
+  width: 150px;
+}
+.s-MasterData-TitleDialog > .size {
+  width: 650px;
+}
+.s-MasterData-TitleDialog .caption {
+  width: 150px;
+}
+.s-MasterData-TitleTypeDialog > .size {
+  width: 650px;
+}
+.s-MasterData-TitleTypeDialog .caption {
+  width: 150px;
+}
+.s-MasterData-PaymentPeriodDialog > .size {
+  width: 650px;
+}
+.s-MasterData-PaymentPeriodDialog .caption {
+  width: 150px;
+}
+.s-MasterData-TitleDialog > .size {
+  width: 650px;
+}
+.s-MasterData-TitleDialog .caption {
+  width: 150px;
+}
