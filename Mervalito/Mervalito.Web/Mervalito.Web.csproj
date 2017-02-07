@@ -1160,6 +1160,9 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="App_Data\texts\user.texts.es.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Imports\ServerTypings\ServerTypings.log">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1550,6 +1553,12 @@
     <TypeScriptCompile Include="Imports\ServerTypings\MasterData.TitleTypeForm.ts" />
     <TypeScriptCompile Include="Modules\MasterData\TitleType\TitleTypeGrid.ts" />
     <TypeScriptCompile Include="Modules\MasterData\TitleType\TitleTypeDialog.ts" />
+    <Content Include="Modules\MasterData\BondType\BondTypeIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondTypeRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondTypeService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondTypeForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\BondType\BondTypeGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\BondType\BondTypeDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1750,10 +1759,14 @@
     <Compile Include="Modules\MasterData\TitleType\TitleTypeRepository.cs" />
     <Compile Include="Modules\MasterData\TitleType\TitleTypeEndpoint.cs" />
     <Compile Include="Modules\MasterData\TitleType\TitleTypePage.cs" />
+    <Compile Include="Modules\MasterData\BondType\BondTypeRow.cs" />
+    <Compile Include="Modules\MasterData\BondType\BondTypeColumns.cs" />
+    <Compile Include="Modules\MasterData\BondType\BondTypeForm.cs" />
+    <Compile Include="Modules\MasterData\BondType\BondTypeRepository.cs" />
+    <Compile Include="Modules\MasterData\BondType\BondTypeEndpoint.cs" />
+    <Compile Include="Modules\MasterData\BondType\BondTypePage.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

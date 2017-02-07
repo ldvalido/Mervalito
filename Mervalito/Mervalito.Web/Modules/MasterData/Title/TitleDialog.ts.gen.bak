@@ -8,6 +8,7 @@ namespace Mervalito.MasterData {
         protected getFormKey() { return TitleForm.formKey; }
         protected getIdProperty() { return TitleRow.idProperty; }
         protected getLocalTextPrefix() { return TitleRow.localTextPrefix; }
+        protected getNameProperty() { return TitleRow.nameProperty; }
         protected getService() { return TitleService.baseUrl; }
 
         protected form = new TitleForm(this.idPrefix);

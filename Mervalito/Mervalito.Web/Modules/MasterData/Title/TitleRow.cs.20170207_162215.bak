@@ -115,14 +115,6 @@ namespace Mervalito.MasterData.Entities
             set { Fields.Name[this] = value; }
         }
 
-        [DisplayName("Id Bond Type"), ForeignKey("[dbo].[BondType]", "IdBondType"), LeftJoin("jIdBondType"), TextualField("IdBondTypeDescription")]
-        [LookupEditor(typeof(BondTypeRow))]
-        public Int32? IdBondType
-        {
-            get { return Fields.IdBondType[this]; }
-            set { Fields.IdBondType[this] = value; }
-        }
-
         [DisplayName("Id Payment Period Description"), Expression("jIdPaymentPeriod.[Description]")]
         public String IdPaymentPeriodDescription
         {
@@ -149,13 +141,6 @@ namespace Mervalito.MasterData.Entities
         {
             get { return Fields.IdTitleTypeDescription[this]; }
             set { Fields.IdTitleTypeDescription[this] = value; }
-        }
-
-        [DisplayName("Id Bond Type Description"), Expression("jIdBondType.[Description]")]
-        public String IdBondTypeDescription
-        {
-            get { return Fields.IdBondTypeDescription[this]; }
-            set { Fields.IdBondTypeDescription[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -191,7 +176,6 @@ namespace Mervalito.MasterData.Entities
             public Int32Field IdTitleType;
             public StringField Symbol;
             public StringField Name;
-            public Int32Field IdBondType;
 
             public StringField IdPaymentPeriodDescription;
             public Int32Field IdPaymentPeriodDays;
@@ -199,8 +183,6 @@ namespace Mervalito.MasterData.Entities
             public StringField IdCurrencyDescription;
 
             public StringField IdTitleTypeDescription;
-
-            public StringField IdBondTypeDescription;
 
             public RowFields()
                 : base()

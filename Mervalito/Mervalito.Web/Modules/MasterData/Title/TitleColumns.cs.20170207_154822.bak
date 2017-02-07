@@ -1,5 +1,5 @@
 ﻿
-namespace Mervalito.MasterData.Forms
+namespace Mervalito.MasterData.Columns
 {
     using Serenity;
     using Serenity.ComponentModel;
@@ -9,22 +9,22 @@ namespace Mervalito.MasterData.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [FormScript("MasterData.Title")]
+    [ColumnsScript("MasterData.Title")]
     [BasedOnRow(typeof(Entities.TitleRow))]
-    public class TitleForm
+    public class TitleColumns
     {
+        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        public Int32 IdTitle { get; set; }
         public DateTime AmortizationDate { get; set; }
         public Double AmortizationAmmount { get; set; }
         public DateTime RentDate { get; set; }
         public Double RentAmmount { get; set; }
+        public Boolean IsLinked { get; set; }
         public Double Price { get; set; }
-        public Int32 IdPaymentPeriod { get; set; }
+        public String IdPaymentPeriodDescription { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public Int32 IdCurrency { get; set; }
-        public Int32 IdTitleType { get; set; }
-        public String Symbol { get; set; }
-        public String Name { get; set; }
-        public Int32 IdBondType { get; set; }
+        public String IdCurrencyDescription { get; set; }
+        public String IdTitleTypeDescription { get; set; }
     }
 }

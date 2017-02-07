@@ -324,6 +324,55 @@ var Mervalito;
 (function (Mervalito) {
     var MasterData;
     (function (MasterData) {
+        var BondTypeForm = (function (_super) {
+            __extends(BondTypeForm, _super);
+            function BondTypeForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return BondTypeForm;
+        }(Serenity.PrefixedContext));
+        BondTypeForm.formKey = 'MasterData.BondType';
+        MasterData.BondTypeForm = BondTypeForm;
+        [['Description', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(BondTypeForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondTypeRow;
+        (function (BondTypeRow) {
+            BondTypeRow.idProperty = 'IdBondType';
+            BondTypeRow.nameProperty = 'Description';
+            BondTypeRow.localTextPrefix = 'MasterData.BondType';
+            var Fields;
+            (function (Fields) {
+            })(Fields = BondTypeRow.Fields || (BondTypeRow.Fields = {}));
+            ['IdBondType', 'Description'].forEach(function (x) { return Fields[x] = x; });
+        })(BondTypeRow = MasterData.BondTypeRow || (MasterData.BondTypeRow = {}));
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondTypeService;
+        (function (BondTypeService) {
+            BondTypeService.baseUrl = 'MasterData/BondType';
+            var Methods;
+            (function (Methods) {
+            })(Methods = BondTypeService.Methods || (BondTypeService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                BondTypeService[x] = function (r, s, o) { return Q.serviceRequest(BondTypeService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = BondTypeService.baseUrl + '/' + x;
+            });
+        })(BondTypeService = MasterData.BondTypeService || (MasterData.BondTypeService = {}));
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
         var CurrencyForm = (function (_super) {
             __extends(CurrencyForm, _super);
             function CurrencyForm() {
@@ -431,7 +480,7 @@ var Mervalito;
         }(Serenity.PrefixedContext));
         TitleForm.formKey = 'MasterData.Title';
         MasterData.TitleForm = TitleForm;
-        [['AmortizationDate', function () { return Serenity.DateEditor; }], ['AmortizationAmmount', function () { return Serenity.DecimalEditor; }], ['RentDate', function () { return Serenity.DateEditor; }], ['RentAmmount', function () { return Serenity.DecimalEditor; }], ['IsLinked', function () { return Serenity.BooleanEditor; }], ['Price', function () { return Serenity.DecimalEditor; }], ['IdPaymentPeriod', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdTitleType', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(TitleForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['AmortizationDate', function () { return Serenity.DateEditor; }], ['AmortizationAmmount', function () { return Serenity.DecimalEditor; }], ['RentDate', function () { return Serenity.DateEditor; }], ['RentAmmount', function () { return Serenity.DecimalEditor; }], ['Price', function () { return Serenity.DecimalEditor; }], ['IdPaymentPeriod', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdTitleType', function () { return Serenity.IntegerEditor; }], ['Symbol', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IdBondType', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(TitleForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -441,11 +490,12 @@ var Mervalito;
         var TitleRow;
         (function (TitleRow) {
             TitleRow.idProperty = 'IdTitle';
+            TitleRow.nameProperty = 'Symbol';
             TitleRow.localTextPrefix = 'MasterData.Title';
             var Fields;
             (function (Fields) {
             })(Fields = TitleRow.Fields || (TitleRow.Fields = {}));
-            ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'IsLinked', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdTitleTypeDescription'].forEach(function (x) { return Fields[x] = x; });
+            ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdTitleTypeDescription', 'IdBondTypeDescription'].forEach(function (x) { return Fields[x] = x; });
         })(TitleRow = MasterData.TitleRow || (MasterData.TitleRow = {}));
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
@@ -2591,6 +2641,53 @@ var Mervalito;
 (function (Mervalito) {
     var MasterData;
     (function (MasterData) {
+        var BondTypeDialog = (function (_super) {
+            __extends(BondTypeDialog, _super);
+            function BondTypeDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MasterData.BondTypeForm(_this.idPrefix);
+                return _this;
+            }
+            BondTypeDialog.prototype.getFormKey = function () { return MasterData.BondTypeForm.formKey; };
+            BondTypeDialog.prototype.getIdProperty = function () { return MasterData.BondTypeRow.idProperty; };
+            BondTypeDialog.prototype.getLocalTextPrefix = function () { return MasterData.BondTypeRow.localTextPrefix; };
+            BondTypeDialog.prototype.getNameProperty = function () { return MasterData.BondTypeRow.nameProperty; };
+            BondTypeDialog.prototype.getService = function () { return MasterData.BondTypeService.baseUrl; };
+            return BondTypeDialog;
+        }(Serenity.EntityDialog));
+        BondTypeDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], BondTypeDialog);
+        MasterData.BondTypeDialog = BondTypeDialog;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondTypeGrid = (function (_super) {
+            __extends(BondTypeGrid, _super);
+            function BondTypeGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            BondTypeGrid.prototype.getColumnsKey = function () { return 'MasterData.BondType'; };
+            BondTypeGrid.prototype.getDialogType = function () { return MasterData.BondTypeDialog; };
+            BondTypeGrid.prototype.getIdProperty = function () { return MasterData.BondTypeRow.idProperty; };
+            BondTypeGrid.prototype.getLocalTextPrefix = function () { return MasterData.BondTypeRow.localTextPrefix; };
+            BondTypeGrid.prototype.getService = function () { return MasterData.BondTypeService.baseUrl; };
+            return BondTypeGrid;
+        }(Serenity.EntityGrid));
+        BondTypeGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], BondTypeGrid);
+        MasterData.BondTypeGrid = BondTypeGrid;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
         var CurrencyDialog = (function (_super) {
             __extends(CurrencyDialog, _super);
             function CurrencyDialog() {
@@ -2695,6 +2792,7 @@ var Mervalito;
             TitleDialog.prototype.getFormKey = function () { return MasterData.TitleForm.formKey; };
             TitleDialog.prototype.getIdProperty = function () { return MasterData.TitleRow.idProperty; };
             TitleDialog.prototype.getLocalTextPrefix = function () { return MasterData.TitleRow.localTextPrefix; };
+            TitleDialog.prototype.getNameProperty = function () { return MasterData.TitleRow.nameProperty; };
             TitleDialog.prototype.getService = function () { return MasterData.TitleService.baseUrl; };
             TitleDialog.prototype.dialogOpen = function () {
                 _super.prototype.dialogOpen.call(this);

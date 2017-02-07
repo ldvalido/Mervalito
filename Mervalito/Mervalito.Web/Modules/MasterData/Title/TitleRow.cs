@@ -12,7 +12,7 @@ namespace Mervalito.MasterData.Entities
     [ConnectionKey("Default"), TableName("[dbo].[Title]"), DisplayName("Title"), InstanceName("Title"), TwoLevelCached]
     [ReadPermission("MasterData:Title")]
     [ModifyPermission("MasterData:Title")]
-    public sealed class TitleRow : Row, IIdRow
+    public sealed class TitleRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id Title"), Identity]
         public Int32? IdTitle
@@ -47,13 +47,6 @@ namespace Mervalito.MasterData.Entities
         {
             get { return Fields.RentAmmount[this]; }
             set { Fields.RentAmmount[this] = value; }
-        }
-
-        [DisplayName("Is Linked"), NotNull]
-        public Boolean? IsLinked
-        {
-            get { return Fields.IsLinked[this]; }
-            set { Fields.IsLinked[this] = value; }
         }
 
         [DisplayName("Price"), NotNull]
@@ -101,6 +94,28 @@ namespace Mervalito.MasterData.Entities
             set { Fields.IdTitleType[this] = value; }
         }
 
+        [DisplayName("Symbol"), Size(50), NotNull, QuickSearch]
+        public String Symbol
+        {
+            get { return Fields.Symbol[this]; }
+            set { Fields.Symbol[this] = value; }
+        }
+
+        [DisplayName("Name"), Size(50), NotNull]
+        public String Name
+        {
+            get { return Fields.Name[this]; }
+            set { Fields.Name[this] = value; }
+        }
+
+        [DisplayName("Id Bond Type"), NotNull, ForeignKey("[dbo].[BondType]", "IdBondType"), LeftJoin("jIdBondType"), TextualField("IdBondTypeDescription")]
+        [LookupEditor(typeof(BondTypeRow))]
+        public Int32? IdBondType
+        {
+            get { return Fields.IdBondType[this]; }
+            set { Fields.IdBondType[this] = value; }
+        }
+
         [DisplayName("Id Payment Period Description"), Expression("jIdPaymentPeriod.[Description]")]
         public String IdPaymentPeriodDescription
         {
@@ -129,9 +144,21 @@ namespace Mervalito.MasterData.Entities
             set { Fields.IdTitleTypeDescription[this] = value; }
         }
 
+        [DisplayName("Id Bond Type Description"), Expression("jIdBondType.[Description]")]
+        public String IdBondTypeDescription
+        {
+            get { return Fields.IdBondTypeDescription[this]; }
+            set { Fields.IdBondTypeDescription[this] = value; }
+        }
+
         IIdField IIdRow.IdField
         {
             get { return Fields.IdTitle; }
+        }
+
+        StringField INameRow.NameField
+        {
+            get { return Fields.Symbol; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
@@ -148,13 +175,15 @@ namespace Mervalito.MasterData.Entities
             public DoubleField AmortizationAmmount;
             public DateTimeField RentDate;
             public DoubleField RentAmmount;
-            public BooleanField IsLinked;
             public DoubleField Price;
             public Int32Field IdPaymentPeriod;
             public DateTimeField StartDate;
             public DateTimeField EndDate;
             public Int32Field IdCurrency;
             public Int32Field IdTitleType;
+            public StringField Symbol;
+            public StringField Name;
+            public Int32Field IdBondType;
 
             public StringField IdPaymentPeriodDescription;
             public Int32Field IdPaymentPeriodDays;
@@ -162,6 +191,8 @@ namespace Mervalito.MasterData.Entities
             public StringField IdCurrencyDescription;
 
             public StringField IdTitleTypeDescription;
+
+            public StringField IdBondTypeDescription;
 
             public RowFields()
                 : base()

@@ -23,6 +23,7 @@ namespace Mervalito.MasterData.Columns
         public Double AmortizationAmmount { get; set; }
         public DateTime RentDate { get; set; }
         public Double RentAmmount { get; set; }
+        public Boolean IsLinked { get; set; }
         public Double Price { get; set; }
         public String IdPaymentPeriodDescription { get; set; }
         public DateTime StartDate { get; set; }

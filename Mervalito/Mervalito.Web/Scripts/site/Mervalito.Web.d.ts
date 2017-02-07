@@ -437,6 +437,46 @@ declare namespace Mervalito {
     }
 }
 declare namespace Mervalito.MasterData {
+    class BondTypeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface BondTypeForm {
+        Description: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface BondTypeRow {
+        IdBondType?: number;
+        Description?: string;
+    }
+    namespace BondTypeRow {
+        const idProperty = "IdBondType";
+        const nameProperty = "Description";
+        const localTextPrefix = "MasterData.BondType";
+        namespace Fields {
+            const IdBondType: any;
+            const Description: any;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace BondTypeService {
+        const baseUrl = "MasterData/BondType";
+        function Create(request: Serenity.SaveRequest<BondTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<BondTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<BondTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<BondTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
     class CurrencyForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
@@ -528,13 +568,15 @@ declare namespace Mervalito.MasterData {
         AmortizationAmmount: Serenity.DecimalEditor;
         RentDate: Serenity.DateEditor;
         RentAmmount: Serenity.DecimalEditor;
-        IsLinked: Serenity.BooleanEditor;
         Price: Serenity.DecimalEditor;
         IdPaymentPeriod: Serenity.IntegerEditor;
         StartDate: Serenity.DateEditor;
         EndDate: Serenity.DateEditor;
         IdCurrency: Serenity.IntegerEditor;
         IdTitleType: Serenity.IntegerEditor;
+        Symbol: Serenity.StringEditor;
+        Name: Serenity.StringEditor;
+        IdBondType: Serenity.IntegerEditor;
     }
 }
 declare namespace Mervalito.MasterData {
@@ -544,20 +586,24 @@ declare namespace Mervalito.MasterData {
         AmortizationAmmount?: number;
         RentDate?: string;
         RentAmmount?: number;
-        IsLinked?: boolean;
         Price?: number;
         IdPaymentPeriod?: number;
         StartDate?: string;
         EndDate?: string;
         IdCurrency?: number;
         IdTitleType?: number;
+        Symbol?: string;
+        Name?: string;
+        IdBondType?: number;
         IdPaymentPeriodDescription?: string;
         IdPaymentPeriodDays?: number;
         IdCurrencyDescription?: string;
         IdTitleTypeDescription?: string;
+        IdBondTypeDescription?: string;
     }
     namespace TitleRow {
         const idProperty = "IdTitle";
+        const nameProperty = "Symbol";
         const localTextPrefix = "MasterData.Title";
         namespace Fields {
             const IdTitle: any;
@@ -565,17 +611,20 @@ declare namespace Mervalito.MasterData {
             const AmortizationAmmount: any;
             const RentDate: any;
             const RentAmmount: any;
-            const IsLinked: any;
             const Price: any;
             const IdPaymentPeriod: any;
             const StartDate: any;
             const EndDate: any;
             const IdCurrency: any;
             const IdTitleType: any;
+            const Symbol: any;
+            const Name: any;
+            const IdBondType: any;
             const IdPaymentPeriodDescription: string;
             const IdPaymentPeriodDays: string;
             const IdCurrencyDescription: string;
             const IdTitleTypeDescription: string;
+            const IdBondTypeDescription: string;
         }
     }
 }
@@ -1125,6 +1174,26 @@ declare namespace Mervalito.Common {
     }
 }
 declare namespace Mervalito.MasterData {
+    class BondTypeDialog extends Serenity.EntityDialog<BondTypeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: BondTypeForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class BondTypeGrid extends Serenity.EntityGrid<BondTypeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof BondTypeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
     class CurrencyDialog extends Serenity.EntityDialog<CurrencyRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -1169,6 +1238,7 @@ declare namespace Mervalito.MasterData {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
         protected getService(): string;
         protected form: TitleForm;
         dialogOpen(): void;

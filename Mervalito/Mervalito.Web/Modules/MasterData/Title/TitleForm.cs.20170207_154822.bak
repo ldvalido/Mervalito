@@ -17,14 +17,12 @@ namespace Mervalito.MasterData.Forms
         public Double AmortizationAmmount { get; set; }
         public DateTime RentDate { get; set; }
         public Double RentAmmount { get; set; }
+        public Boolean IsLinked { get; set; }
         public Double Price { get; set; }
         public Int32 IdPaymentPeriod { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public Int32 IdCurrency { get; set; }
         public Int32 IdTitleType { get; set; }
-        public String Symbol { get; set; }
-        public String Name { get; set; }
-        public Int32 IdBondType { get; set; }
     }
 }
