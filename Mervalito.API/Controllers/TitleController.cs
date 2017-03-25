@@ -1,4 +1,8 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+using Mervalito.Domain.Contract;
+using Mervalito.Model.Model;
 
 namespace Mervalito.API.Controllers
 {
@@ -9,15 +13,20 @@ namespace Mervalito.API.Controllers
     [RoutePrefix("")]
     public class TitleController : ApiController
     {
+
+        /// <summary>
+        /// The weather condition service
+        /// </summary>
+        private readonly ITitleService _titleService;
         /// <summary>
         /// Lists this instance.
         /// </summary>
         /// <returns></returns>
         [Route("titles")]
         [HttpGet]
-        public string List()
+        public List<Title> List()
         {
-            return "list";
+            return _titleService.List().ToList();
         }
         /// <summary>
         /// Updates the specified title identifier.
@@ -26,9 +35,16 @@ namespace Mervalito.API.Controllers
         /// <returns></returns>
         [Route("titles/{titleId:int}")]
         [HttpPut]
-        public string Update(int titleId)
+        public Title Update(Title title)
         {
-            return "update";
+            return _titleService.Update(title);
         }
+
+        #region C...tor
+        public TitleController(ITitleService titleService)
+        {
+            _titleService = titleService;
+        }
+        #endregion
     }
 }
