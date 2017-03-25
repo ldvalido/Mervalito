@@ -9,7 +9,7 @@ namespace Mervalito.Domain.Base
     /// <typeparam name="T"></typeparam>
     public abstract class CrudService<T> : ICrudService<T> where T : class
     {
-        public StorageBase<T> StorageBase { get; set; } 
+        public IStorageBase<T> StorageBase { get; set; } 
         /// <summary>
         /// Creates the specified entity.
         /// </summary>

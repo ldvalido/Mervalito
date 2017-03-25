@@ -49,9 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\IStorageBase.cs" />
     <Compile Include="Base\StorageBase.cs" />
     <Compile Include="Context\MervalitoContext.cs" />
     <Compile Include="Implementation\TitleStorage.cs" />
+    <Compile Include="Mapping\BondTypeMapping.cs" />
+    <Compile Include="Mapping\CurrencyMapping.cs" />
+    <Compile Include="Mapping\PaymentPeriodMapping.cs" />
+    <Compile Include="Mapping\RentTypeMapping.cs" />
+    <Compile Include="Mapping\TitleMapping.cs" />
+    <Compile Include="Mapping\TitleTypeMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

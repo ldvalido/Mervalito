@@ -10,7 +10,7 @@ namespace Mervalito.Storage.Base
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class StorageBase<T> where T : class
+    public abstract class StorageBase<T> : IStorageBase<T> where T : class
     {
         /// <summary>
         /// Gets or sets the database context.
