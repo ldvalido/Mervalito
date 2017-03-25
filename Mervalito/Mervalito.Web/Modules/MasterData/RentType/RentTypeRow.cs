@@ -9,17 +9,17 @@ namespace Mervalito.MasterData.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Default"), TableName("[dbo].[Currency]"), DisplayName("Currency"), InstanceName("Currency"), TwoLevelCached]
-    [ReadPermission("MasterData:Currency")]
-    [ModifyPermission("MasterData:Currency")]
-    [LookupScript("MasterData.CurrencyRow")]
-    public sealed class CurrencyRow : Row, IIdRow, INameRow
+    [ConnectionKey("Default"), TableName("[dbo].[RentType]"), DisplayName("Rent Type"), InstanceName("Rent Type"), TwoLevelCached]
+    [ReadPermission("MasterData:RentType")]
+    [ModifyPermission("MasterData:RentType")]
+    [LookupScript("MasterData.RentTypeRow")]
+    public sealed class RentTypeRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Id Currency"), Identity]
-        public Int32? IdCurrency
+        [DisplayName("Id Rent Type"), Identity]
+        public Int32? IdRentType
         {
-            get { return Fields.IdCurrency[this]; }
-            set { Fields.IdCurrency[this] = value; }
+            get { return Fields.IdRentType[this]; }
+            set { Fields.IdRentType[this] = value; }
         }
 
         [DisplayName("Description"), Size(50), NotNull, QuickSearch]
@@ -29,16 +29,9 @@ namespace Mervalito.MasterData.Entities
             set { Fields.Description[this] = value; }
         }
 
-        [DisplayName("Symbol"), Size(3), NotNull]
-        public String Symbol
-        {
-            get { return Fields.Symbol[this]; }
-            set { Fields.Symbol[this] = value; }
-        }
-
         IIdField IIdRow.IdField
         {
-            get { return Fields.IdCurrency; }
+            get { return Fields.IdRentType; }
         }
 
         StringField INameRow.NameField
@@ -48,21 +41,20 @@ namespace Mervalito.MasterData.Entities
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public CurrencyRow()
+        public RentTypeRow()
             : base(Fields)
         {
         }
 
         public class RowFields : RowFieldsBase
         {
-            public Int32Field IdCurrency;
+            public Int32Field IdRentType;
             public StringField Description;
-            public StringField Symbol;
 
             public RowFields()
                 : base()
             {
-                LocalTextPrefix = "MasterData.Currency";
+                LocalTextPrefix = "MasterData.RentType";
             }
         }
     }

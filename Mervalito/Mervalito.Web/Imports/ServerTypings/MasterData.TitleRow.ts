@@ -49,7 +49,7 @@ namespace Mervalito.MasterData {
             export declare const IdBondTypeDescription: string;
         }
 
-        ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdTitleTypeDescription', 'IdBondTypeDescription'].forEach(x => (<any>Fields)[x] = x);
+        ['IdTitle', 'Symbol', 'Name','AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'IdBondType', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdTitleTypeDescription', 'IdBondTypeDescription'].forEach(x => (<any>Fields)[x] = x);
     }
 }
 

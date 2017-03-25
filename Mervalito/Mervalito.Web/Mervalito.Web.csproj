@@ -1166,6 +1166,9 @@
     <Content Include="App_Data\texts\user.texts.es.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\texts\user.texts.invariant.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Imports\ServerTypings\ServerTypings.log">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1222,6 +1225,7 @@
     <Content Include="Scripts\ckeditor\README.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
+    <None Include="Properties\PublishProfiles\SmarterAsp.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -1562,6 +1566,17 @@
     <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondTypeForm.ts" />
     <TypeScriptCompile Include="Modules\MasterData\BondType\BondTypeGrid.ts" />
     <TypeScriptCompile Include="Modules\MasterData\BondType\BondTypeDialog.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Currency\CurrencyEditor.ts" />
+    <Content Include="Modules\MasterData\RentType\RentTypeIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.RentTypeRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.RentTypeService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.RentTypeForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\RentType\RentTypeGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\RentType\RentTypeDialog.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\RentType\RentTypeEditor.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\RentType\RentTypeEditorDialog.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Title\TitleEditor.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Title\TitleEditorDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1768,6 +1783,12 @@
     <Compile Include="Modules\MasterData\BondType\BondTypeRepository.cs" />
     <Compile Include="Modules\MasterData\BondType\BondTypeEndpoint.cs" />
     <Compile Include="Modules\MasterData\BondType\BondTypePage.cs" />
+    <Compile Include="Modules\MasterData\RentType\RentTypeRow.cs" />
+    <Compile Include="Modules\MasterData\RentType\RentTypeColumns.cs" />
+    <Compile Include="Modules\MasterData\RentType\RentTypeForm.cs" />
+    <Compile Include="Modules\MasterData\RentType\RentTypeRepository.cs" />
+    <Compile Include="Modules\MasterData\RentType\RentTypeEndpoint.cs" />
+    <Compile Include="Modules\MasterData\RentType\RentTypePage.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

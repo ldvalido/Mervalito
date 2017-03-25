@@ -9,11 +9,10 @@ namespace Mervalito.MasterData.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [FormScript("MasterData.Currency")]
-    [BasedOnRow(typeof(Entities.CurrencyRow))]
-    public class CurrencyForm
+    [FormScript("MasterData.RentType")]
+    [BasedOnRow(typeof(Entities.RentTypeRow))]
+    public class RentTypeForm
     {
         public String Description { get; set; }
-        public String Symbol { get; set; }
     }
 }

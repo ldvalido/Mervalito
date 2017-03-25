@@ -482,12 +482,14 @@ declare namespace Mervalito.MasterData {
     }
     interface CurrencyForm {
         Description: Serenity.StringEditor;
+        Symbol: Serenity.StringEditor;
     }
 }
 declare namespace Mervalito.MasterData {
     interface CurrencyRow {
         IdCurrency?: number;
         Description?: string;
+        Symbol?: string;
     }
     namespace CurrencyRow {
         const idProperty = "IdCurrency";
@@ -496,6 +498,7 @@ declare namespace Mervalito.MasterData {
         namespace Fields {
             const IdCurrency: any;
             const Description: any;
+            const Symbol: any;
         }
     }
 }
@@ -560,10 +563,52 @@ declare namespace Mervalito.MasterData {
     }
 }
 declare namespace Mervalito.MasterData {
+    class RentTypeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface RentTypeForm {
+        Description: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface RentTypeRow {
+        IdRentType?: number;
+        Description?: string;
+    }
+    namespace RentTypeRow {
+        const idProperty = "IdRentType";
+        const nameProperty = "Description";
+        const localTextPrefix = "MasterData.RentType";
+        namespace Fields {
+            const IdRentType: any;
+            const Description: any;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace RentTypeService {
+        const baseUrl = "MasterData/RentType";
+        function Create(request: Serenity.SaveRequest<RentTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<RentTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<RentTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<RentTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
     class TitleForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
     interface TitleForm {
+        Symbol: Serenity.StringEditor;
+        Name: Serenity.StringEditor;
         AmortizationDate: Serenity.DateEditor;
         AmortizationAmmount: Serenity.DecimalEditor;
         RentDate: Serenity.DateEditor;
@@ -574,9 +619,8 @@ declare namespace Mervalito.MasterData {
         EndDate: Serenity.DateEditor;
         IdCurrency: Serenity.IntegerEditor;
         IdTitleType: Serenity.IntegerEditor;
-        Symbol: Serenity.StringEditor;
-        Name: Serenity.StringEditor;
         IdBondType: Serenity.IntegerEditor;
+        IdRentType: Serenity.IntegerEditor;
     }
 }
 declare namespace Mervalito.MasterData {
@@ -1204,6 +1248,14 @@ declare namespace Mervalito.MasterData {
     }
 }
 declare namespace Mervalito.MasterData {
+    class CurrencyEditor extends Common.GridEditorBase<CurrencyRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): any;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
     class CurrencyGrid extends Serenity.EntityGrid<CurrencyRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof CurrencyDialog;
@@ -1234,6 +1286,42 @@ declare namespace Mervalito.MasterData {
     }
 }
 declare namespace Mervalito.MasterData {
+    class RentTypeDialog extends Serenity.EntityDialog<RentTypeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: RentTypeForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class RentTypeEditor extends Common.GridEditorBase<RentTypeRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof RentTypeEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class RentTypeEditorDialog extends Common.GridEditorDialog<RentTypeRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: RentTypeForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class RentTypeGrid extends Serenity.EntityGrid<RentTypeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof RentTypeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
     class TitleDialog extends Serenity.EntityDialog<TitleRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -1242,6 +1330,22 @@ declare namespace Mervalito.MasterData {
         protected getService(): string;
         protected form: TitleForm;
         dialogOpen(): void;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleEditor extends Common.GridEditorBase<TitleRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof TitleEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class TitleEditorDialog extends Common.GridEditorDialog<TitleRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: TitleForm;
     }
 }
 declare namespace Mervalito.MasterData {
