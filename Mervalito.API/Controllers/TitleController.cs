@@ -28,12 +28,18 @@ namespace Mervalito.API.Controllers
         {
             return _titleService.List().ToList();
         }
+
+        [Route("titles/{id:int}")]
+        public Title Get(int id)
+        {
+            return _titleService.Get(id);
+        }
         /// <summary>
         /// Updates the specified title identifier.
         /// </summary>
-        /// <param name="titleId">The title identifier.</param>
+        /// <param name="title">The title.</param>
         /// <returns></returns>
-        [Route("titles/{titleId:int}")]
+        [Route("titles")]
         [HttpPut]
         public Title Update(Title title)
         {

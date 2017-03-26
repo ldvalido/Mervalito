@@ -6,7 +6,7 @@ namespace Mervalito.Domain.Contract
     /// 
     /// </summary>
     /// <seealso cref="Mervalito.Domain.Base.ICrudService{Mervalito.Model.Model.Title}" />
-    public interface ITitleService:ICrudService<Title>
+    public interface ITitleService:ICrudService<Title,int>
     {
     }
 }

@@ -37,6 +37,7 @@ namespace Mervalito.Model.Model
         /// The rent amount.
         /// </value>
         public double RentAmount { get; set; }
+
         /// <summary>
         /// Gets or sets the price.
         /// </summary>
@@ -44,6 +45,14 @@ namespace Mervalito.Model.Model
         /// The price.
         /// </value>
         public double Price { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tir.
+        /// </summary>
+        /// <value>
+        /// The tir.
+        /// </value>
+        public double TIR { get; set; }
         /// <summary>
         /// Gets or sets the payment period.
         /// </summary>

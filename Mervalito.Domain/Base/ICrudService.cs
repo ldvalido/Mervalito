@@ -6,7 +6,8 @@ namespace Mervalito.Domain.Base
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface ICrudService<T> where T : class
+    /// <typeparam name="TS"></typeparam>
+    public interface ICrudService<T,TS> where T : class
     {
         /// <summary>
         /// Creates the specified entity.
@@ -20,6 +21,12 @@ namespace Mervalito.Domain.Base
         /// <param name="entity">The entity.</param>
         /// <returns></returns>
         T Delete(T entity);
+        /// <summary>
+        /// Gets the specified key.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
+        T Get(TS key);
         /// <summary>
         /// Lists this instance.
         /// </summary>

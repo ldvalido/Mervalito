@@ -4,7 +4,7 @@ using Mervalito.Model.Model;
 
 namespace Mervalito.Domain.Implementation
 {
-    public class TitleService : CrudService<Title>,ITitleService
+    public class TitleService : CrudService<Title,int>,ITitleService
     {
     }
 }

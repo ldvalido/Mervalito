@@ -10,7 +10,7 @@ namespace Mervalito.Storage.Base
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class StorageBase<T> : IStorageBase<T> where T : class
+    public abstract class StorageBase<T,TS> : IStorageBase<T,TS> where T : class
     {
         /// <summary>
         /// Gets or sets the database context.
@@ -65,6 +65,15 @@ namespace Mervalito.Storage.Base
             var returnValue = DbContext.Set<T>().Remove(element);
             DbContext.SaveChanges();
             return returnValue;
+        }
+        /// <summary>
+        /// Gets the specified value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public virtual T Get(TS value)
+        {
+            return DbContext.Set<T>().Find(value);
         }
         /// <summary>
         /// Gets all.

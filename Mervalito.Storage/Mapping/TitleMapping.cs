@@ -1,6 +1,4 @@
-﻿using System.Data.Entity.Infrastructure;
-using System.Data.Entity.ModelConfiguration;
-using System.Data.Entity.ModelConfiguration.Conventions;
+﻿using System.Data.Entity.ModelConfiguration;
 using Mervalito.Model.Model;
 
 namespace Mervalito.Storage.Mapping
@@ -15,12 +13,12 @@ namespace Mervalito.Storage.Mapping
             Property(t => t.AmortizationAmount).HasColumnName("AmortizationAmmount");
             Property(t => t.RentAmount).HasColumnName("RentAmmount");
 
-            HasRequired(t => t.BondType).WithRequiredPrincipal().WillCascadeOnDelete(false);
-            HasRequired(t => t.Currency).WithRequiredPrincipal();
-            HasRequired(t => t.PaymentPeriod).WithRequiredPrincipal();
-            HasRequired(t => t.TitleType).WithRequiredPrincipal();
-            HasRequired(t => t.RentType).WithRequiredPrincipal();
-            
+            HasRequired(t => t.PaymentPeriod).WithMany().Map(p => p.MapKey("IdPaymentPeriod")).WillCascadeOnDelete(false);
+            HasRequired(t => t.BondType).WithMany().Map(p => p.MapKey("IdbondType")).WillCascadeOnDelete(false);
+            HasRequired(t => t.Currency).WithMany().Map(p => p.MapKey("IdCurrency")).WillCascadeOnDelete(false);
+            HasRequired(t => t.TitleType).WithMany().Map(p => p.MapKey("IdTitleType")).WillCascadeOnDelete(false);
+            HasRequired(t => t.RentType).WithMany().Map(p => p.MapKey("IdRentType")).WillCascadeOnDelete(false);
+
         }
     }
 }

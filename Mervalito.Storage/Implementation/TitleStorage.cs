@@ -7,7 +7,7 @@ namespace Mervalito.Storage.Implementation
     /// <summary>
     /// 
     /// </summary>
-    public class TitleStorage : StorageBase<Title>
+    public class TitleStorage : StorageBase<Title,int>
     {
         #region Overrides of StorageBase<Title>
 

@@ -25,6 +25,7 @@ namespace Mervalito.Storage.Context
         public MervalitoContext() : base("MervalitoCnnStr")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<MervalitoContext>());
+            this.Configuration.LazyLoadingEnabled = true;
         }
         #endregion
         
@@ -48,7 +49,7 @@ namespace Mervalito.Storage.Context
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
-
+            
             base.OnModelCreating(modelBuilder);
         }
         #endregion
