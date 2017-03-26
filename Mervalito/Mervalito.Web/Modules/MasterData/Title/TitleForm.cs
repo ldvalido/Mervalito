@@ -27,5 +27,7 @@ namespace Mervalito.MasterData.Forms
         public Double RentAmmount { get; set; }
         public Double Price { get; set; }
         public Int32 IdPaymentPeriod { get; set; }
+        
+        public Double Tir { get; set; }
     }
 }

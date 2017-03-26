@@ -15,11 +15,15 @@ namespace Mervalito.MasterData {
         Symbol?: string;
         Name?: string;
         IdBondType?: number;
+        IdRentType?: number;
+        Tir?: number;
         IdPaymentPeriodDescription?: string;
         IdPaymentPeriodDays?: number;
         IdCurrencyDescription?: string;
+        IdCurrencySymbol?: string;
         IdTitleTypeDescription?: string;
         IdBondTypeDescription?: string;
+        IdRentTypeDescription?: string;
     }
 
     export namespace TitleRow {
@@ -42,14 +46,18 @@ namespace Mervalito.MasterData {
             export declare const Symbol;
             export declare const Name;
             export declare const IdBondType;
+            export declare const IdRentType;
+            export declare const Tir;
             export declare const IdPaymentPeriodDescription: string;
             export declare const IdPaymentPeriodDays: string;
             export declare const IdCurrencyDescription: string;
+            export declare const IdCurrencySymbol: string;
             export declare const IdTitleTypeDescription: string;
             export declare const IdBondTypeDescription: string;
+            export declare const IdRentTypeDescription: string;
         }
 
-        ['IdTitle', 'Symbol', 'Name','AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'IdBondType', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdTitleTypeDescription', 'IdBondTypeDescription'].forEach(x => (<any>Fields)[x] = x);
+        ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(x => (<any>Fields)[x] = x);
     }
 }
 

@@ -7533,3 +7533,9 @@ section.content > .s-DataGrid {
 .s-MasterData-TitleDialog .caption {
   width: 150px;
 }
+.s-MasterData-TitleDialog > .size {
+  width: 650px;
+}
+.s-MasterData-TitleDialog .caption {
+  width: 150px;
+}

@@ -95,7 +95,6 @@ namespace Mervalito.MasterData.Entities
             set { Fields.IdPaymentPeriod[this] = value; }
         }
 
-
         [DisplayName("Id Currency"), NotNull, ForeignKey("[dbo].[Currency]", "IdCurrency"), LeftJoin("jIdCurrency"), TextualField("IdCurrencyDescription")]
         [LookupEditor(typeof(CurrencyRow))]
         public Int32? IdCurrency
@@ -126,6 +125,13 @@ namespace Mervalito.MasterData.Entities
         {
             get { return Fields.IdRentType[this]; }
             set { Fields.IdRentType[this] = value; }
+        }
+
+        [DisplayName("Tir"), Column("TIR"), NotNull,ReadOnly(true)]
+        public Double? Tir
+        {
+            get { return Fields.Tir[this]; }
+            set { Fields.Tir[this] = value; }
         }
 
         [DisplayName("Id Payment Period Description"), Expression("jIdPaymentPeriod.[Description]")]
@@ -211,6 +217,7 @@ namespace Mervalito.MasterData.Entities
             public StringField Name;
             public Int32Field IdBondType;
             public Int32Field IdRentType;
+            public DoubleField Tir;
 
             public StringField IdPaymentPeriodDescription;
             public Int32Field IdPaymentPeriodDays;

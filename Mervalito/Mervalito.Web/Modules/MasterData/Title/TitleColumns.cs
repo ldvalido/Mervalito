@@ -35,6 +35,7 @@ namespace Mervalito.MasterData.Columns
         public String IdCurrencyDescription { get; set; }
         public String IdTitleTypeDescription { get; set; }
         public String IdBondTypeDescription { get; set; }
-        public String IdRentTypeDescription { get; set; }
+        public String IdRentTypeDescription { get; set; }        
+        public Double Tir { get; set; }
     }
 }

@@ -621,6 +621,7 @@ declare namespace Mervalito.MasterData {
         IdTitleType: Serenity.IntegerEditor;
         IdBondType: Serenity.IntegerEditor;
         IdRentType: Serenity.IntegerEditor;
+        Tir: Serenity.DecimalEditor;
     }
 }
 declare namespace Mervalito.MasterData {
@@ -639,11 +640,15 @@ declare namespace Mervalito.MasterData {
         Symbol?: string;
         Name?: string;
         IdBondType?: number;
+        IdRentType?: number;
+        Tir?: number;
         IdPaymentPeriodDescription?: string;
         IdPaymentPeriodDays?: number;
         IdCurrencyDescription?: string;
+        IdCurrencySymbol?: string;
         IdTitleTypeDescription?: string;
         IdBondTypeDescription?: string;
+        IdRentTypeDescription?: string;
     }
     namespace TitleRow {
         const idProperty = "IdTitle";
@@ -664,11 +669,15 @@ declare namespace Mervalito.MasterData {
             const Symbol: any;
             const Name: any;
             const IdBondType: any;
+            const IdRentType: any;
+            const Tir: any;
             const IdPaymentPeriodDescription: string;
             const IdPaymentPeriodDays: string;
             const IdCurrencyDescription: string;
+            const IdCurrencySymbol: string;
             const IdTitleTypeDescription: string;
             const IdBondTypeDescription: string;
+            const IdRentTypeDescription: string;
         }
     }
 }
