@@ -73,7 +73,13 @@ namespace Mervalito.Storage.Base
         /// <returns></returns>
         public virtual T Get(TS value)
         {
-            return DbContext.Set<T>().Find(value);
+            T returnValue;
+            using (var ctx = new MervalitoContext())
+            {
+                returnValue = ctx.Set<T>().Find(value);
+            }
+
+            return returnValue;
         }
         /// <summary>
         /// Gets all.
@@ -81,7 +87,7 @@ namespace Mervalito.Storage.Base
         /// <returns></returns>
         public virtual IEnumerable<T> GetAll()
         {
-            return GetList().AsQueryable();
+            return GetList();
         }
         /// <summary>
         /// Gets the by criteria.

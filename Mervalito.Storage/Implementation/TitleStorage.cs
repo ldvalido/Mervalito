@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Mervalito.Model.Model;
 using Mervalito.Storage.Base;
+using Mervalito.Storage.Context;
 
 namespace Mervalito.Storage.Implementation
 {
@@ -24,6 +25,29 @@ namespace Mervalito.Storage.Implementation
                 Include("RentType").
                 Include("TitleType");
         }
+
+        #region Overrides of StorageBase<Title,int>
+
+        /// <summary>
+        /// Gets the specified value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public override Title Get(int value)
+        {
+            using (var ctx = new MervalitoContext())
+            {
+                var entry = ctx.Set<Title>().Find(value);
+                ctx.Entry(entry).Reference(t=>t.BondType).Load();
+                ctx.Entry(entry).Reference(t=>t.RentType).Load();
+                ctx.Entry(entry).Reference(t=>t.PaymentPeriod).Load();
+                ctx.Entry(entry).Reference(t => t.Currency).Load();
+                ctx.Entry(entry).Reference(t => t.TitleType).Load();
+                return entry;
+            }
+        }
+
+        #endregion
 
         #endregion
     }

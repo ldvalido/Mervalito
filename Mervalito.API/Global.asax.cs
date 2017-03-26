@@ -5,6 +5,10 @@ using Mervalito.IOC;
 
 namespace Mervalito.API
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Web.HttpApplication" />
     public class WebApiApplication : HttpApplication
     {
         /// <summary>

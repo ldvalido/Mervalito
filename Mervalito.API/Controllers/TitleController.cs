@@ -28,7 +28,11 @@ namespace Mervalito.API.Controllers
         {
             return _titleService.List().ToList();
         }
-
+        /// <summary>
+        /// Gets the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         [Route("titles/{id:int}")]
         public Title Get(int id)
         {
@@ -45,7 +49,10 @@ namespace Mervalito.API.Controllers
         {
             return _titleService.Update(title);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="titleService"></param>
         #region C...tor
         public TitleController(ITitleService titleService)
         {
