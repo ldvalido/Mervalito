@@ -1577,6 +1577,30 @@
     <TypeScriptCompile Include="Modules\MasterData\RentType\RentTypeEditorDialog.ts" />
     <TypeScriptCompile Include="Modules\MasterData\Title\TitleEditor.ts" />
     <TypeScriptCompile Include="Modules\MasterData\Title\TitleEditorDialog.ts" />
+    <Content Include="Modules\MutualFund\CompanyManager\CompanyManagerIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.CompanyManagerRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.CompanyManagerService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.CompanyManagerForm.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\CompanyManager\CompanyManagerGrid.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\CompanyManager\CompanyManagerDialog.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\CompanyManager\CompanyManagerEditor.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\CompanyManager\CompanyManagerEditorDialog.ts" />
+    <Content Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.InvestmentHorizonRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.InvestmentHorizonService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.InvestmentHorizonForm.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonGrid.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonDialog.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonEditor.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonEditorDialog.ts" />
+    <Content Include="Modules\MutualFund\MutualFund\MutualFundIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.MutualFundRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.MutualFundService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MutualFund.MutualFundForm.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundGrid.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundDialog.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundEditor.ts" />
+    <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundEditorDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1789,6 +1813,24 @@
     <Compile Include="Modules\MasterData\RentType\RentTypeRepository.cs" />
     <Compile Include="Modules\MasterData\RentType\RentTypeEndpoint.cs" />
     <Compile Include="Modules\MasterData\RentType\RentTypePage.cs" />
+    <Compile Include="Modules\MutualFund\CompanyManager\CompanyManagerRow.cs" />
+    <Compile Include="Modules\MutualFund\CompanyManager\CompanyManagerColumns.cs" />
+    <Compile Include="Modules\MutualFund\CompanyManager\CompanyManagerForm.cs" />
+    <Compile Include="Modules\MutualFund\CompanyManager\CompanyManagerRepository.cs" />
+    <Compile Include="Modules\MutualFund\CompanyManager\CompanyManagerEndpoint.cs" />
+    <Compile Include="Modules\MutualFund\CompanyManager\CompanyManagerPage.cs" />
+    <Compile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonRow.cs" />
+    <Compile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonColumns.cs" />
+    <Compile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonForm.cs" />
+    <Compile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonRepository.cs" />
+    <Compile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonEndpoint.cs" />
+    <Compile Include="Modules\MutualFund\InvestmentHorizon\InvestmentHorizonPage.cs" />
+    <Compile Include="Modules\MutualFund\MutualFund\MutualFundRow.cs" />
+    <Compile Include="Modules\MutualFund\MutualFund\MutualFundColumns.cs" />
+    <Compile Include="Modules\MutualFund\MutualFund\MutualFundForm.cs" />
+    <Compile Include="Modules\MutualFund\MutualFund\MutualFundRepository.cs" />
+    <Compile Include="Modules\MutualFund\MutualFund\MutualFundEndpoint.cs" />
+    <Compile Include="Modules\MutualFund\MutualFund\MutualFundPage.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -7539,3 +7539,33 @@ section.content > .s-DataGrid {
 .s-MasterData-TitleDialog .caption {
   width: 150px;
 }
+.s-MutualFund-CompanyManagerDialog > .size {
+  width: 650px;
+}
+.s-MutualFund-CompanyManagerDialog .caption {
+  width: 150px;
+}
+.s-MutualFund-InvestmentHorizonDialog > .size {
+  width: 650px;
+}
+.s-MutualFund-InvestmentHorizonDialog .caption {
+  width: 150px;
+}
+.s-MutualFund-MutualFundDialog > .size {
+  width: 650px;
+}
+.s-MutualFund-MutualFundDialog .caption {
+  width: 150px;
+}
+.s-MutualFund-InvestmentHorizonDialog > .size {
+  width: 650px;
+}
+.s-MutualFund-InvestmentHorizonDialog .caption {
+  width: 150px;
+}
+.s-MutualFund-MutualFundDialog > .size {
+  width: 650px;
+}
+.s-MutualFund-MutualFundDialog .caption {
+  width: 150px;
+}

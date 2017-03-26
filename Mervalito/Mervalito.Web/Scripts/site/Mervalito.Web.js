@@ -696,6 +696,153 @@ var Mervalito;
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
 (function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerForm = (function (_super) {
+            __extends(CompanyManagerForm, _super);
+            function CompanyManagerForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return CompanyManagerForm;
+        }(Serenity.PrefixedContext));
+        CompanyManagerForm.formKey = 'MutualFund.CompanyManager';
+        MutualFund.CompanyManagerForm = CompanyManagerForm;
+        [['Description', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(CompanyManagerForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerRow;
+        (function (CompanyManagerRow) {
+            CompanyManagerRow.idProperty = 'IdCompanyManager';
+            CompanyManagerRow.nameProperty = 'Description';
+            CompanyManagerRow.localTextPrefix = 'MutualFund.CompanyManager';
+            var Fields;
+            (function (Fields) {
+            })(Fields = CompanyManagerRow.Fields || (CompanyManagerRow.Fields = {}));
+            ['IdCompanyManager', 'Description'].forEach(function (x) { return Fields[x] = x; });
+        })(CompanyManagerRow = MutualFund.CompanyManagerRow || (MutualFund.CompanyManagerRow = {}));
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerService;
+        (function (CompanyManagerService) {
+            CompanyManagerService.baseUrl = 'MutualFund/CompanyManager';
+            var Methods;
+            (function (Methods) {
+            })(Methods = CompanyManagerService.Methods || (CompanyManagerService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                CompanyManagerService[x] = function (r, s, o) { return Q.serviceRequest(CompanyManagerService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = CompanyManagerService.baseUrl + '/' + x;
+            });
+        })(CompanyManagerService = MutualFund.CompanyManagerService || (MutualFund.CompanyManagerService = {}));
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonForm = (function (_super) {
+            __extends(InvestmentHorizonForm, _super);
+            function InvestmentHorizonForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return InvestmentHorizonForm;
+        }(Serenity.PrefixedContext));
+        InvestmentHorizonForm.formKey = 'MutualFund.InvestmentHorizon';
+        MutualFund.InvestmentHorizonForm = InvestmentHorizonForm;
+        [['Description', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(InvestmentHorizonForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonRow;
+        (function (InvestmentHorizonRow) {
+            InvestmentHorizonRow.idProperty = 'IdInvestmentHorizon';
+            InvestmentHorizonRow.nameProperty = 'Description';
+            InvestmentHorizonRow.localTextPrefix = 'MutualFund.InvestmentHorizon';
+            var Fields;
+            (function (Fields) {
+            })(Fields = InvestmentHorizonRow.Fields || (InvestmentHorizonRow.Fields = {}));
+            ['IdInvestmentHorizon', 'Description'].forEach(function (x) { return Fields[x] = x; });
+        })(InvestmentHorizonRow = MutualFund.InvestmentHorizonRow || (MutualFund.InvestmentHorizonRow = {}));
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonService;
+        (function (InvestmentHorizonService) {
+            InvestmentHorizonService.baseUrl = 'MutualFund/InvestmentHorizon';
+            var Methods;
+            (function (Methods) {
+            })(Methods = InvestmentHorizonService.Methods || (InvestmentHorizonService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                InvestmentHorizonService[x] = function (r, s, o) { return Q.serviceRequest(InvestmentHorizonService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = InvestmentHorizonService.baseUrl + '/' + x;
+            });
+        })(InvestmentHorizonService = MutualFund.InvestmentHorizonService || (MutualFund.InvestmentHorizonService = {}));
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundForm = (function (_super) {
+            __extends(MutualFundForm, _super);
+            function MutualFundForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return MutualFundForm;
+        }(Serenity.PrefixedContext));
+        MutualFundForm.formKey = 'MutualFund.MutualFund';
+        MutualFund.MutualFundForm = MutualFundForm;
+        [['Name', function () { return Serenity.StringEditor; }], ['Portion', function () { return Serenity.DecimalEditor; }], ['MinimumInvestment', function () { return Serenity.DecimalEditor; }], ['SettlementDeadline', function () { return Serenity.IntegerEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdCompanyManager', function () { return Serenity.IntegerEditor; }], ['IdInvestmentHorizon', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['LowerDuration', function () { return Serenity.IntegerEditor; }], ['UpperDuration', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(MutualFundForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundRow;
+        (function (MutualFundRow) {
+            MutualFundRow.idProperty = 'IdMutualFund';
+            MutualFundRow.nameProperty = 'Name';
+            MutualFundRow.localTextPrefix = 'MutualFund.MutualFund';
+            var Fields;
+            (function (Fields) {
+            })(Fields = MutualFundRow.Fields || (MutualFundRow.Fields = {}));
+            ['IdMutualFund', 'Name', 'Portion', 'MinimumInvestment', 'SettlementDeadline', 'IdCurrency', 'IdCompanyManager', 'IdInvestmentHorizon', 'StartDate', 'LowerDuration', 'UpperDuration', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdCompanyManagerDescription', 'IdInvestmentHorizonDescription'].forEach(function (x) { return Fields[x] = x; });
+        })(MutualFundRow = MutualFund.MutualFundRow || (MutualFund.MutualFundRow = {}));
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundService;
+        (function (MutualFundService) {
+            MutualFundService.baseUrl = 'MutualFund/MutualFund';
+            var Methods;
+            (function (Methods) {
+            })(Methods = MutualFundService.Methods || (MutualFundService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                MutualFundService[x] = function (r, s, o) { return Q.serviceRequest(MutualFundService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = MutualFundService.baseUrl + '/' + x;
+            });
+        })(MutualFundService = MutualFund.MutualFundService || (MutualFund.MutualFundService = {}));
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
     var Administration;
     (function (Administration) {
         var LanguageDialog = (function (_super) {
@@ -3316,5 +3463,281 @@ var Mervalito;
         ], SignUpPanel);
         Membership.SignUpPanel = SignUpPanel;
     })(Membership = Mervalito.Membership || (Mervalito.Membership = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerDialog = (function (_super) {
+            __extends(CompanyManagerDialog, _super);
+            function CompanyManagerDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MutualFund.CompanyManagerForm(_this.idPrefix);
+                return _this;
+            }
+            CompanyManagerDialog.prototype.getFormKey = function () { return MutualFund.CompanyManagerForm.formKey; };
+            CompanyManagerDialog.prototype.getIdProperty = function () { return MutualFund.CompanyManagerRow.idProperty; };
+            CompanyManagerDialog.prototype.getLocalTextPrefix = function () { return MutualFund.CompanyManagerRow.localTextPrefix; };
+            CompanyManagerDialog.prototype.getNameProperty = function () { return MutualFund.CompanyManagerRow.nameProperty; };
+            CompanyManagerDialog.prototype.getService = function () { return MutualFund.CompanyManagerService.baseUrl; };
+            return CompanyManagerDialog;
+        }(Serenity.EntityDialog));
+        CompanyManagerDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], CompanyManagerDialog);
+        MutualFund.CompanyManagerDialog = CompanyManagerDialog;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerEditor = (function (_super) {
+            __extends(CompanyManagerEditor, _super);
+            function CompanyManagerEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            CompanyManagerEditor.prototype.getColumnsKey = function () { return 'MutualFund.CompanyManager'; };
+            CompanyManagerEditor.prototype.getDialogType = function () { return MutualFund.CompanyManagerEditorDialog; };
+            CompanyManagerEditor.prototype.getLocalTextPrefix = function () { return MutualFund.CompanyManagerRow.localTextPrefix; };
+            return CompanyManagerEditor;
+        }(Mervalito.Common.GridEditorBase));
+        CompanyManagerEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], CompanyManagerEditor);
+        MutualFund.CompanyManagerEditor = CompanyManagerEditor;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerEditorDialog = (function (_super) {
+            __extends(CompanyManagerEditorDialog, _super);
+            function CompanyManagerEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MutualFund.CompanyManagerForm(_this.idPrefix);
+                return _this;
+            }
+            CompanyManagerEditorDialog.prototype.getFormKey = function () { return MutualFund.CompanyManagerForm.formKey; };
+            CompanyManagerEditorDialog.prototype.getLocalTextPrefix = function () { return MutualFund.CompanyManagerRow.localTextPrefix; };
+            CompanyManagerEditorDialog.prototype.getNameProperty = function () { return MutualFund.CompanyManagerRow.nameProperty; };
+            return CompanyManagerEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        CompanyManagerEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], CompanyManagerEditorDialog);
+        MutualFund.CompanyManagerEditorDialog = CompanyManagerEditorDialog;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var CompanyManagerGrid = (function (_super) {
+            __extends(CompanyManagerGrid, _super);
+            function CompanyManagerGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CompanyManagerGrid.prototype.getColumnsKey = function () { return 'MutualFund.CompanyManager'; };
+            CompanyManagerGrid.prototype.getDialogType = function () { return MutualFund.CompanyManagerDialog; };
+            CompanyManagerGrid.prototype.getIdProperty = function () { return MutualFund.CompanyManagerRow.idProperty; };
+            CompanyManagerGrid.prototype.getLocalTextPrefix = function () { return MutualFund.CompanyManagerRow.localTextPrefix; };
+            CompanyManagerGrid.prototype.getService = function () { return MutualFund.CompanyManagerService.baseUrl; };
+            return CompanyManagerGrid;
+        }(Serenity.EntityGrid));
+        CompanyManagerGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], CompanyManagerGrid);
+        MutualFund.CompanyManagerGrid = CompanyManagerGrid;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonDialog = (function (_super) {
+            __extends(InvestmentHorizonDialog, _super);
+            function InvestmentHorizonDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MutualFund.InvestmentHorizonForm(_this.idPrefix);
+                return _this;
+            }
+            InvestmentHorizonDialog.prototype.getFormKey = function () { return MutualFund.InvestmentHorizonForm.formKey; };
+            InvestmentHorizonDialog.prototype.getIdProperty = function () { return MutualFund.InvestmentHorizonRow.idProperty; };
+            InvestmentHorizonDialog.prototype.getLocalTextPrefix = function () { return MutualFund.InvestmentHorizonRow.localTextPrefix; };
+            InvestmentHorizonDialog.prototype.getNameProperty = function () { return MutualFund.InvestmentHorizonRow.nameProperty; };
+            InvestmentHorizonDialog.prototype.getService = function () { return MutualFund.InvestmentHorizonService.baseUrl; };
+            return InvestmentHorizonDialog;
+        }(Serenity.EntityDialog));
+        InvestmentHorizonDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], InvestmentHorizonDialog);
+        MutualFund.InvestmentHorizonDialog = InvestmentHorizonDialog;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonEditor = (function (_super) {
+            __extends(InvestmentHorizonEditor, _super);
+            function InvestmentHorizonEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            InvestmentHorizonEditor.prototype.getColumnsKey = function () { return 'MutualFund.InvestmentHorizon'; };
+            InvestmentHorizonEditor.prototype.getDialogType = function () { return MutualFund.InvestmentHorizonEditorDialog; };
+            InvestmentHorizonEditor.prototype.getLocalTextPrefix = function () { return MutualFund.InvestmentHorizonRow.localTextPrefix; };
+            return InvestmentHorizonEditor;
+        }(Mervalito.Common.GridEditorBase));
+        InvestmentHorizonEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], InvestmentHorizonEditor);
+        MutualFund.InvestmentHorizonEditor = InvestmentHorizonEditor;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonEditorDialog = (function (_super) {
+            __extends(InvestmentHorizonEditorDialog, _super);
+            function InvestmentHorizonEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MutualFund.InvestmentHorizonForm(_this.idPrefix);
+                return _this;
+            }
+            InvestmentHorizonEditorDialog.prototype.getFormKey = function () { return MutualFund.InvestmentHorizonForm.formKey; };
+            InvestmentHorizonEditorDialog.prototype.getLocalTextPrefix = function () { return MutualFund.InvestmentHorizonRow.localTextPrefix; };
+            InvestmentHorizonEditorDialog.prototype.getNameProperty = function () { return MutualFund.InvestmentHorizonRow.nameProperty; };
+            return InvestmentHorizonEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        InvestmentHorizonEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], InvestmentHorizonEditorDialog);
+        MutualFund.InvestmentHorizonEditorDialog = InvestmentHorizonEditorDialog;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var InvestmentHorizonGrid = (function (_super) {
+            __extends(InvestmentHorizonGrid, _super);
+            function InvestmentHorizonGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            InvestmentHorizonGrid.prototype.getColumnsKey = function () { return 'MutualFund.InvestmentHorizon'; };
+            InvestmentHorizonGrid.prototype.getDialogType = function () { return MutualFund.InvestmentHorizonDialog; };
+            InvestmentHorizonGrid.prototype.getIdProperty = function () { return MutualFund.InvestmentHorizonRow.idProperty; };
+            InvestmentHorizonGrid.prototype.getLocalTextPrefix = function () { return MutualFund.InvestmentHorizonRow.localTextPrefix; };
+            InvestmentHorizonGrid.prototype.getService = function () { return MutualFund.InvestmentHorizonService.baseUrl; };
+            return InvestmentHorizonGrid;
+        }(Serenity.EntityGrid));
+        InvestmentHorizonGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], InvestmentHorizonGrid);
+        MutualFund.InvestmentHorizonGrid = InvestmentHorizonGrid;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundDialog = (function (_super) {
+            __extends(MutualFundDialog, _super);
+            function MutualFundDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MutualFund.MutualFundForm(_this.idPrefix);
+                return _this;
+            }
+            MutualFundDialog.prototype.getFormKey = function () { return MutualFund.MutualFundForm.formKey; };
+            MutualFundDialog.prototype.getIdProperty = function () { return MutualFund.MutualFundRow.idProperty; };
+            MutualFundDialog.prototype.getLocalTextPrefix = function () { return MutualFund.MutualFundRow.localTextPrefix; };
+            MutualFundDialog.prototype.getNameProperty = function () { return MutualFund.MutualFundRow.nameProperty; };
+            MutualFundDialog.prototype.getService = function () { return MutualFund.MutualFundService.baseUrl; };
+            return MutualFundDialog;
+        }(Serenity.EntityDialog));
+        MutualFundDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], MutualFundDialog);
+        MutualFund.MutualFundDialog = MutualFundDialog;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundEditor = (function (_super) {
+            __extends(MutualFundEditor, _super);
+            function MutualFundEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            MutualFundEditor.prototype.getColumnsKey = function () { return 'MutualFund.MutualFund'; };
+            MutualFundEditor.prototype.getDialogType = function () { return MutualFund.MutualFundEditorDialog; };
+            MutualFundEditor.prototype.getLocalTextPrefix = function () { return MutualFund.MutualFundRow.localTextPrefix; };
+            return MutualFundEditor;
+        }(Mervalito.Common.GridEditorBase));
+        MutualFundEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], MutualFundEditor);
+        MutualFund.MutualFundEditor = MutualFundEditor;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundEditorDialog = (function (_super) {
+            __extends(MutualFundEditorDialog, _super);
+            function MutualFundEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MutualFund.MutualFundForm(_this.idPrefix);
+                return _this;
+            }
+            MutualFundEditorDialog.prototype.getFormKey = function () { return MutualFund.MutualFundForm.formKey; };
+            MutualFundEditorDialog.prototype.getLocalTextPrefix = function () { return MutualFund.MutualFundRow.localTextPrefix; };
+            MutualFundEditorDialog.prototype.getNameProperty = function () { return MutualFund.MutualFundRow.nameProperty; };
+            return MutualFundEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        MutualFundEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], MutualFundEditorDialog);
+        MutualFund.MutualFundEditorDialog = MutualFundEditorDialog;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MutualFund;
+    (function (MutualFund) {
+        var MutualFundGrid = (function (_super) {
+            __extends(MutualFundGrid, _super);
+            function MutualFundGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            MutualFundGrid.prototype.getColumnsKey = function () { return 'MutualFund.MutualFund'; };
+            MutualFundGrid.prototype.getDialogType = function () { return MutualFund.MutualFundDialog; };
+            MutualFundGrid.prototype.getIdProperty = function () { return MutualFund.MutualFundRow.idProperty; };
+            MutualFundGrid.prototype.getLocalTextPrefix = function () { return MutualFund.MutualFundRow.localTextPrefix; };
+            MutualFundGrid.prototype.getService = function () { return MutualFund.MutualFundService.baseUrl; };
+            return MutualFundGrid;
+        }(Serenity.EntityGrid));
+        MutualFundGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], MutualFundGrid);
+        MutualFund.MutualFundGrid = MutualFundGrid;
+    })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
 })(Mervalito || (Mervalito = {}));
 //# sourceMappingURL=Mervalito.Web.js.map

@@ -818,6 +818,161 @@ declare namespace Mervalito.Membership {
         Password?: string;
     }
 }
+declare namespace Mervalito.MutualFund {
+    class CompanyManagerForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface CompanyManagerForm {
+        Description: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    interface CompanyManagerRow {
+        IdCompanyManager?: number;
+        Description?: string;
+    }
+    namespace CompanyManagerRow {
+        const idProperty = "IdCompanyManager";
+        const nameProperty = "Description";
+        const localTextPrefix = "MutualFund.CompanyManager";
+        namespace Fields {
+            const IdCompanyManager: any;
+            const Description: any;
+        }
+    }
+}
+declare namespace Mervalito.MutualFund {
+    namespace CompanyManagerService {
+        const baseUrl = "MutualFund/CompanyManager";
+        function Create(request: Serenity.SaveRequest<CompanyManagerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CompanyManagerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CompanyManagerRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CompanyManagerRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class InvestmentHorizonForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface InvestmentHorizonForm {
+        Description: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    interface InvestmentHorizonRow {
+        IdInvestmentHorizon?: number;
+        Description?: string;
+    }
+    namespace InvestmentHorizonRow {
+        const idProperty = "IdInvestmentHorizon";
+        const nameProperty = "Description";
+        const localTextPrefix = "MutualFund.InvestmentHorizon";
+        namespace Fields {
+            const IdInvestmentHorizon: any;
+            const Description: any;
+        }
+    }
+}
+declare namespace Mervalito.MutualFund {
+    namespace InvestmentHorizonService {
+        const baseUrl = "MutualFund/InvestmentHorizon";
+        function Create(request: Serenity.SaveRequest<InvestmentHorizonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<InvestmentHorizonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<InvestmentHorizonRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<InvestmentHorizonRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class MutualFundForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface MutualFundForm {
+        Name: Serenity.StringEditor;
+        Portion: Serenity.DecimalEditor;
+        MinimumInvestment: Serenity.DecimalEditor;
+        SettlementDeadline: Serenity.IntegerEditor;
+        IdCurrency: Serenity.IntegerEditor;
+        IdCompanyManager: Serenity.IntegerEditor;
+        IdInvestmentHorizon: Serenity.IntegerEditor;
+        StartDate: Serenity.DateEditor;
+        LowerDuration: Serenity.IntegerEditor;
+        UpperDuration: Serenity.IntegerEditor;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    interface MutualFundRow {
+        IdMutualFund?: number;
+        Name?: string;
+        Portion?: number;
+        MinimumInvestment?: number;
+        SettlementDeadline?: number;
+        IdCurrency?: number;
+        IdCompanyManager?: number;
+        IdInvestmentHorizon?: number;
+        StartDate?: string;
+        LowerDuration?: number;
+        UpperDuration?: number;
+        IdCurrencyDescription?: string;
+        IdCurrencySymbol?: string;
+        IdCompanyManagerDescription?: string;
+        IdInvestmentHorizonDescription?: string;
+    }
+    namespace MutualFundRow {
+        const idProperty = "IdMutualFund";
+        const nameProperty = "Name";
+        const localTextPrefix = "MutualFund.MutualFund";
+        namespace Fields {
+            const IdMutualFund: any;
+            const Name: any;
+            const Portion: any;
+            const MinimumInvestment: any;
+            const SettlementDeadline: any;
+            const IdCurrency: any;
+            const IdCompanyManager: any;
+            const IdInvestmentHorizon: any;
+            const StartDate: any;
+            const LowerDuration: any;
+            const UpperDuration: any;
+            const IdCurrencyDescription: string;
+            const IdCurrencySymbol: string;
+            const IdCompanyManagerDescription: string;
+            const IdInvestmentHorizonDescription: string;
+        }
+    }
+}
+declare namespace Mervalito.MutualFund {
+    namespace MutualFundService {
+        const baseUrl = "MutualFund/MutualFund";
+        function Create(request: Serenity.SaveRequest<MutualFundRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<MutualFundRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<MutualFundRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<MutualFundRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
 declare namespace Mervalito {
     interface ScriptUserDefinition {
         Username?: string;
@@ -1419,6 +1574,114 @@ declare namespace Mervalito.Membership {
     class SignUpPanel extends Serenity.PropertyPanel<SignUpRequest, any> {
         protected getFormKey(): string;
         private form;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class CompanyManagerDialog extends Serenity.EntityDialog<CompanyManagerRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CompanyManagerForm;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class CompanyManagerEditor extends Common.GridEditorBase<CompanyManagerRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CompanyManagerEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class CompanyManagerEditorDialog extends Common.GridEditorDialog<CompanyManagerRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: CompanyManagerForm;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class CompanyManagerGrid extends Serenity.EntityGrid<CompanyManagerRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CompanyManagerDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class InvestmentHorizonDialog extends Serenity.EntityDialog<InvestmentHorizonRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: InvestmentHorizonForm;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class InvestmentHorizonEditor extends Common.GridEditorBase<InvestmentHorizonRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof InvestmentHorizonEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class InvestmentHorizonEditorDialog extends Common.GridEditorDialog<InvestmentHorizonRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: InvestmentHorizonForm;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class InvestmentHorizonGrid extends Serenity.EntityGrid<InvestmentHorizonRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof InvestmentHorizonDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class MutualFundDialog extends Serenity.EntityDialog<MutualFundRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: MutualFundForm;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class MutualFundEditor extends Common.GridEditorBase<MutualFundRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof MutualFundEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class MutualFundEditorDialog extends Common.GridEditorDialog<MutualFundRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: MutualFundForm;
+    }
+}
+declare namespace Mervalito.MutualFund {
+    class MutualFundGrid extends Serenity.EntityGrid<MutualFundRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof MutualFundDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
         constructor(container: JQuery);
     }
 }
