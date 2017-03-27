@@ -52,9 +52,13 @@
     <Compile Include="Base\IStorageBase.cs" />
     <Compile Include="Base\StorageBase.cs" />
     <Compile Include="Context\MervalitoContext.cs" />
+    <Compile Include="Implementation\MutualFundStorage.cs" />
     <Compile Include="Implementation\TitleStorage.cs" />
     <Compile Include="Mapping\BondTypeMapping.cs" />
+    <Compile Include="Mapping\CompanyManagerMapping.cs" />
     <Compile Include="Mapping\CurrencyMapping.cs" />
+    <Compile Include="Mapping\InvestmentHorizonMapping.cs" />
+    <Compile Include="Mapping\MutualFundMapping.cs" />
     <Compile Include="Mapping\PaymentPeriodMapping.cs" />
     <Compile Include="Mapping\RentTypeMapping.cs" />
     <Compile Include="Mapping\TitleMapping.cs" />

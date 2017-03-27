@@ -16,6 +16,9 @@ namespace Mervalito.Storage.Context
         public DbSet<RentType> RentType { get; set; }
         public DbSet<Title> Title { get; set; }
         public DbSet<TitleType> TitleType { get; set; }
+        public DbSet<InvestmentHorizon> InvestmentHorizon { get; set; }
+        public DbSet<CompanyManager> CompanyManager { get; set; }
+        public DbSet<MutualFund> MutualFund { get; set; }
         #endregion
 
         #region C...tor        

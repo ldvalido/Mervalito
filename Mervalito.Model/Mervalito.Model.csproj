@@ -43,7 +43,10 @@
     <Compile Include="Model\Base\BaseDescriptionEntity.cs" />
     <Compile Include="Model\Base\BaseIdEntity.cs" />
     <Compile Include="Model\BondType.cs" />
+    <Compile Include="Model\CompanyManager.cs" />
     <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\InvestmentHorizon.cs" />
+    <Compile Include="Model\MutualFund.cs" />
     <Compile Include="Model\PaymentPeriod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\RentType.cs" />
