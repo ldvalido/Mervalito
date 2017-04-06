@@ -1,5 +1,6 @@
 ﻿using Swashbuckle.Application;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Mervalito.API
 {
@@ -15,12 +16,10 @@ namespace Mervalito.API
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
-            //config.EnableCors();
-
+            config.EnableCors(new EnableCorsAttribute("*","*","*"));
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
-            
             config.Formatters.Remove(config.Formatters.XmlFormatter);
 
             config.Routes.MapHttpRoute(

@@ -9,5 +9,6 @@ namespace Mervalito.Model.Model
 {
     public class CompanyManager : BaseDescriptionEntity
     {
+        public int ExternalId { get; set; }
     }
 }
