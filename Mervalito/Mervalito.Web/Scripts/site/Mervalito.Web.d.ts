@@ -824,12 +824,14 @@ declare namespace Mervalito.MutualFund {
     }
     interface CompanyManagerForm {
         Description: Serenity.StringEditor;
+        ExternalId: Serenity.IntegerEditor;
     }
 }
 declare namespace Mervalito.MutualFund {
     interface CompanyManagerRow {
         IdCompanyManager?: number;
         Description?: string;
+        ExternalId?: number;
     }
     namespace CompanyManagerRow {
         const idProperty = "IdCompanyManager";
@@ -838,6 +840,7 @@ declare namespace Mervalito.MutualFund {
         namespace Fields {
             const IdCompanyManager: any;
             const Description: any;
+            const ExternalId: any;
         }
     }
 }

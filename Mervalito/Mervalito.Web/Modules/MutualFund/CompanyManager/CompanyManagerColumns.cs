@@ -15,7 +15,8 @@ namespace Mervalito.MutualFund.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 IdCompanyManager { get; set; }
-        [EditLink]
+        [EditLink,Width(500)]
         public String Description { get; set; }
+        public Int32 ExternalId { get; set; }
     }
 }

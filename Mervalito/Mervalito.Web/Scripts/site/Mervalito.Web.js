@@ -707,7 +707,7 @@ var Mervalito;
         }(Serenity.PrefixedContext));
         CompanyManagerForm.formKey = 'MutualFund.CompanyManager';
         MutualFund.CompanyManagerForm = CompanyManagerForm;
-        [['Description', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(CompanyManagerForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Description', function () { return Serenity.StringEditor; }], ['ExternalId', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(CompanyManagerForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -722,7 +722,7 @@ var Mervalito;
             var Fields;
             (function (Fields) {
             })(Fields = CompanyManagerRow.Fields || (CompanyManagerRow.Fields = {}));
-            ['IdCompanyManager', 'Description'].forEach(function (x) { return Fields[x] = x; });
+            ['IdCompanyManager', 'Description', 'ExternalId'].forEach(function (x) { return Fields[x] = x; });
         })(CompanyManagerRow = MutualFund.CompanyManagerRow || (MutualFund.CompanyManagerRow = {}));
     })(MutualFund = Mervalito.MutualFund || (Mervalito.MutualFund = {}));
 })(Mervalito || (Mervalito = {}));

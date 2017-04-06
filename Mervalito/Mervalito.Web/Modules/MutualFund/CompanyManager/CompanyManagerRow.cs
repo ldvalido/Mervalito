@@ -22,11 +22,18 @@ namespace Mervalito.MutualFund.Entities
             set { Fields.IdCompanyManager[this] = value; }
         }
 
-        [DisplayName("Description"), Size(50), NotNull, QuickSearch]
+        [DisplayName("Description"), Size(500), NotNull, QuickSearch, SortOrder(0)]
         public String Description
         {
             get { return Fields.Description[this]; }
             set { Fields.Description[this] = value; }
+        }
+
+        [DisplayName("External Id"), NotNull]
+        public Int32? ExternalId
+        {
+            get { return Fields.ExternalId[this]; }
+            set { Fields.ExternalId[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -50,6 +57,7 @@ namespace Mervalito.MutualFund.Entities
         {
             public Int32Field IdCompanyManager;
             public StringField Description;
+            public Int32Field ExternalId;
 
             public RowFields()
                 : base()

@@ -14,5 +14,6 @@ namespace Mervalito.MutualFund.Forms
     public class CompanyManagerForm
     {
         public String Description { get; set; }
+        public Int32 ExternalId { get; set; }
     }
 }
