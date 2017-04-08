@@ -45,7 +45,13 @@ namespace Mervalito.Model.Model
         /// The price.
         /// </value>
         public double Price { get; set; }
-
+        /// <summary>
+        /// Gets or sets the minimum quantity.
+        /// </summary>
+        /// <value>
+        /// The minimum quantity.
+        /// </value>
+        public int MinimumQuantity { get; set; }
         /// <summary>
         /// Gets or sets the tir.
         /// </summary>
