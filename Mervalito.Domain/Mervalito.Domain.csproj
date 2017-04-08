@@ -43,9 +43,11 @@
     <Compile Include="Base\CrudService.cs" />
     <Compile Include="Base\ICrudService.cs" />
     <Compile Include="Contract\ICompanyManagerService.cs" />
+    <Compile Include="Contract\ICurrencyStorage.cs" />
     <Compile Include="Contract\IMutualFundService.cs" />
     <Compile Include="Contract\ITitleService.cs" />
     <Compile Include="Implementation\CompanyManagerService.cs" />
+    <Compile Include="Implementation\CurrencyService.cs" />
     <Compile Include="Implementation\MutualFundService.cs" />
     <Compile Include="Implementation\TitleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

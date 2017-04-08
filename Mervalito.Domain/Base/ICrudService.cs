@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Mervalito.Domain.Base
 {
@@ -27,6 +28,13 @@ namespace Mervalito.Domain.Base
         /// <param name="key">The key.</param>
         /// <returns></returns>
         T Get(TS key);
+
+        /// <summary>
+        /// Gets the by.
+        /// </summary>
+        /// <param name="func">The function.</param>
+        /// <returns></returns>
+        T GetBy(Func<T, bool> func);
         /// <summary>
         /// Lists this instance.
         /// </summary>
@@ -38,5 +46,6 @@ namespace Mervalito.Domain.Base
         /// <param name="entity">The entity.</param>
         /// <returns></returns>
         T Update(T entity);
+
     }
 }

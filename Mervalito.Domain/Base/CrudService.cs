@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Mervalito.Storage.Base;
 
 namespace Mervalito.Domain.Base
@@ -38,6 +40,16 @@ namespace Mervalito.Domain.Base
         public T Get(TS key)
         {
             return StorageBase.Get(key);
+        }
+        /// <summary>
+        /// Gets the by.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <param name="func">The function.</param>
+        /// <returns></returns>
+        public T GetBy(Func<T,bool> func)
+        {
+            return StorageBase.GetByCriteria(func).FirstOrDefault();
         }
 
         /// <summary>
