@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Mervalito.Domain.Contract;
@@ -38,6 +39,20 @@ namespace Mervalito.API.Controllers
         {
             return _titleService.Get(id);
         }
+
+        /// <summary>
+        /// Gets the by identifier.
+        /// </summary>
+        /// <param name="symbol">The symbol.</param>
+        /// <returns></returns>
+        [Route("titles/{symbol}")]
+        public Title GetById(string symbol)
+        {
+            return
+                _titleService.GetBy(
+                    title => string.Compare(title.Symbol, symbol, StringComparison.OrdinalIgnoreCase) == 0);
+        }
+
         /// <summary>
         /// Updates the specified title identifier.
         /// </summary>

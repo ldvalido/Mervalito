@@ -118,6 +118,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Base\BaseCRUDApiController.cs" />
     <Compile Include="Controllers\CompanyManagerController.cs" />
+    <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\MutualFundController.cs" />
     <Compile Include="Controllers\TitleController.cs" />
     <Compile Include="Global.asax.cs">
