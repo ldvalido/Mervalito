@@ -127,7 +127,7 @@ namespace Mervalito.MasterData.Entities
             set { Fields.IdRentType[this] = value; }
         }
 
-        [DisplayName("Tir"), Column("TIR"), NotNull,ReadOnly(true)]
+        [DisplayName("Tir"), Column("TIR"), NotNull,Visible(false)]
         public Double? Tir
         {
             get { return Fields.Tir[this]; }
@@ -139,6 +139,14 @@ namespace Mervalito.MasterData.Entities
         {
             get { return Fields.MinimumQuantity[this]; }
             set { Fields.MinimumQuantity[this] = value; }
+        }
+
+        [DisplayName("Id Bond Rating"), ForeignKey("[dbo].[BondRating]", "IdBondRating"), LeftJoin("jIdBondRating"), TextualField("IdBondRatingSymbol")]
+        [LookupEditor(typeof(BondRatingRow))]
+        public Int32? IdBondRating
+        {
+            get { return Fields.IdBondRating[this]; }
+            set { Fields.IdBondRating[this] = value; }
         }
 
         [DisplayName("Id Payment Period Description"), Expression("jIdPaymentPeriod.[Description]")]
@@ -190,6 +198,20 @@ namespace Mervalito.MasterData.Entities
             set { Fields.IdRentTypeDescription[this] = value; }
         }
 
+        [DisplayName("Id Bond Rating Symbol"), Expression("jIdBondRating.[Symbol]")]
+        public String IdBondRatingSymbol
+        {
+            get { return Fields.IdBondRatingSymbol[this]; }
+            set { Fields.IdBondRatingSymbol[this] = value; }
+        }
+
+        [DisplayName("Id Bond Rating Description"), Expression("jIdBondRating.[Description]")]
+        public String IdBondRatingDescription
+        {
+            get { return Fields.IdBondRatingDescription[this]; }
+            set { Fields.IdBondRatingDescription[this] = value; }
+        }
+
         IIdField IIdRow.IdField
         {
             get { return Fields.IdTitle; }
@@ -226,6 +248,7 @@ namespace Mervalito.MasterData.Entities
             public Int32Field IdRentType;
             public DoubleField Tir;
             public Int32Field MinimumQuantity;
+            public Int32Field IdBondRating;
 
             public StringField IdPaymentPeriodDescription;
             public Int32Field IdPaymentPeriodDays;
@@ -238,6 +261,9 @@ namespace Mervalito.MasterData.Entities
             public StringField IdBondTypeDescription;
 
             public StringField IdRentTypeDescription;
+
+            public StringField IdBondRatingSymbol;
+            public StringField IdBondRatingDescription;
 
             public RowFields()
                 : base()

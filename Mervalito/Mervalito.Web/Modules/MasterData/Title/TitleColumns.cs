@@ -38,5 +38,6 @@ namespace Mervalito.MasterData.Columns
         public String IdBondTypeDescription { get; set; }
         public String IdRentTypeDescription { get; set; }   
         public Int32 MinimumQuantity { get; set; }
+        public String IdBondRatingDescription { get; set; }
     }
 }

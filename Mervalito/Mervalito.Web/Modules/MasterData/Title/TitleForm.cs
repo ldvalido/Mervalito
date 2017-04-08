@@ -30,5 +30,6 @@ namespace Mervalito.MasterData.Forms
         
         public Double Tir { get; set; }
         public Int32 MinimumQuantity { get; set; }
+        public Int32 IdBondRating { get; set; }
     }
 }

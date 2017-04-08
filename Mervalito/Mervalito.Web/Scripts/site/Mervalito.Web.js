@@ -324,6 +324,55 @@ var Mervalito;
 (function (Mervalito) {
     var MasterData;
     (function (MasterData) {
+        var BondRatingForm = (function (_super) {
+            __extends(BondRatingForm, _super);
+            function BondRatingForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return BondRatingForm;
+        }(Serenity.PrefixedContext));
+        BondRatingForm.formKey = 'MasterData.BondRating';
+        MasterData.BondRatingForm = BondRatingForm;
+        [['Symbol', function () { return Serenity.StringEditor; }], ['Description', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(BondRatingForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondRatingRow;
+        (function (BondRatingRow) {
+            BondRatingRow.idProperty = 'IdBondRating';
+            BondRatingRow.nameProperty = 'Symbol';
+            BondRatingRow.localTextPrefix = 'MasterData.BondRating';
+            var Fields;
+            (function (Fields) {
+            })(Fields = BondRatingRow.Fields || (BondRatingRow.Fields = {}));
+            ['IdBondRating', 'Symbol', 'Description'].forEach(function (x) { return Fields[x] = x; });
+        })(BondRatingRow = MasterData.BondRatingRow || (MasterData.BondRatingRow = {}));
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondRatingService;
+        (function (BondRatingService) {
+            BondRatingService.baseUrl = 'MasterData/BondRating';
+            var Methods;
+            (function (Methods) {
+            })(Methods = BondRatingService.Methods || (BondRatingService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                BondRatingService[x] = function (r, s, o) { return Q.serviceRequest(BondRatingService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = BondRatingService.baseUrl + '/' + x;
+            });
+        })(BondRatingService = MasterData.BondRatingService || (MasterData.BondRatingService = {}));
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
         var BondTypeForm = (function (_super) {
             __extends(BondTypeForm, _super);
             function BondTypeForm() {
@@ -529,7 +578,7 @@ var Mervalito;
         }(Serenity.PrefixedContext));
         TitleForm.formKey = 'MasterData.Title';
         MasterData.TitleForm = TitleForm;
-        [['AmortizationDate', function () { return Serenity.DateEditor; }], ['AmortizationAmmount', function () { return Serenity.DecimalEditor; }], ['RentDate', function () { return Serenity.DateEditor; }], ['RentAmmount', function () { return Serenity.DecimalEditor; }], ['Price', function () { return Serenity.DecimalEditor; }], ['IdPaymentPeriod', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdTitleType', function () { return Serenity.IntegerEditor; }], ['Symbol', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IdBondType', function () { return Serenity.IntegerEditor; }], ['IdRentType', function () { return Serenity.IntegerEditor; }], ['Tir', function () { return Serenity.DecimalEditor; }], ['MinimumQuantity', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(TitleForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['AmortizationDate', function () { return Serenity.DateEditor; }], ['AmortizationAmmount', function () { return Serenity.DecimalEditor; }], ['RentDate', function () { return Serenity.DateEditor; }], ['RentAmmount', function () { return Serenity.DecimalEditor; }], ['Price', function () { return Serenity.DecimalEditor; }], ['IdPaymentPeriod', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdTitleType', function () { return Serenity.IntegerEditor; }], ['Symbol', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IdBondType', function () { return Serenity.IntegerEditor; }], ['IdRentType', function () { return Serenity.IntegerEditor; }], ['Tir', function () { return Serenity.DecimalEditor; }], ['MinimumQuantity', function () { return Serenity.IntegerEditor; }], ['IdBondRating', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(TitleForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -544,7 +593,7 @@ var Mervalito;
             var Fields;
             (function (Fields) {
             })(Fields = TitleRow.Fields || (TitleRow.Fields = {}));
-            ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'MinimumQuantity', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(function (x) { return Fields[x] = x; });
+            ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'MinimumQuantity', 'IdBondRating', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdCurrencyRate', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription', 'IdBondRatingSymbol', 'IdBondRatingDescription'].forEach(function (x) { return Fields[x] = x; });
         })(TitleRow = MasterData.TitleRow || (MasterData.TitleRow = {}));
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
@@ -2832,6 +2881,98 @@ var Mervalito;
         }());
         Common.UserPreferenceStorage = UserPreferenceStorage;
     })(Common = Mervalito.Common || (Mervalito.Common = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondRatingDialog = (function (_super) {
+            __extends(BondRatingDialog, _super);
+            function BondRatingDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MasterData.BondRatingForm(_this.idPrefix);
+                return _this;
+            }
+            BondRatingDialog.prototype.getFormKey = function () { return MasterData.BondRatingForm.formKey; };
+            BondRatingDialog.prototype.getIdProperty = function () { return MasterData.BondRatingRow.idProperty; };
+            BondRatingDialog.prototype.getLocalTextPrefix = function () { return MasterData.BondRatingRow.localTextPrefix; };
+            BondRatingDialog.prototype.getNameProperty = function () { return MasterData.BondRatingRow.nameProperty; };
+            BondRatingDialog.prototype.getService = function () { return MasterData.BondRatingService.baseUrl; };
+            return BondRatingDialog;
+        }(Serenity.EntityDialog));
+        BondRatingDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], BondRatingDialog);
+        MasterData.BondRatingDialog = BondRatingDialog;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondRatingEditor = (function (_super) {
+            __extends(BondRatingEditor, _super);
+            function BondRatingEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            BondRatingEditor.prototype.getColumnsKey = function () { return 'MasterData.BondRating'; };
+            BondRatingEditor.prototype.getDialogType = function () { return MasterData.BondRatingEditorDialog; };
+            BondRatingEditor.prototype.getLocalTextPrefix = function () { return MasterData.BondRatingRow.localTextPrefix; };
+            return BondRatingEditor;
+        }(Mervalito.Common.GridEditorBase));
+        BondRatingEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], BondRatingEditor);
+        MasterData.BondRatingEditor = BondRatingEditor;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondRatingEditorDialog = (function (_super) {
+            __extends(BondRatingEditorDialog, _super);
+            function BondRatingEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MasterData.BondRatingForm(_this.idPrefix);
+                return _this;
+            }
+            BondRatingEditorDialog.prototype.getFormKey = function () { return MasterData.BondRatingForm.formKey; };
+            BondRatingEditorDialog.prototype.getLocalTextPrefix = function () { return MasterData.BondRatingRow.localTextPrefix; };
+            BondRatingEditorDialog.prototype.getNameProperty = function () { return MasterData.BondRatingRow.nameProperty; };
+            return BondRatingEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        BondRatingEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], BondRatingEditorDialog);
+        MasterData.BondRatingEditorDialog = BondRatingEditorDialog;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var BondRatingGrid = (function (_super) {
+            __extends(BondRatingGrid, _super);
+            function BondRatingGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            BondRatingGrid.prototype.getColumnsKey = function () { return 'MasterData.BondRating'; };
+            BondRatingGrid.prototype.getDialogType = function () { return MasterData.BondRatingDialog; };
+            BondRatingGrid.prototype.getIdProperty = function () { return MasterData.BondRatingRow.idProperty; };
+            BondRatingGrid.prototype.getLocalTextPrefix = function () { return MasterData.BondRatingRow.localTextPrefix; };
+            BondRatingGrid.prototype.getService = function () { return MasterData.BondRatingService.baseUrl; };
+            return BondRatingGrid;
+        }(Serenity.EntityGrid));
+        BondRatingGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], BondRatingGrid);
+        MasterData.BondRatingGrid = BondRatingGrid;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
 (function (Mervalito) {

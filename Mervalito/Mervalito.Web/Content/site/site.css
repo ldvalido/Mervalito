@@ -7593,3 +7593,15 @@ section.content > .s-DataGrid {
 .s-MasterData-CurrencyDialog .caption {
   width: 150px;
 }
+.s-MasterData-BondRatingDialog > .size {
+  width: 650px;
+}
+.s-MasterData-BondRatingDialog .caption {
+  width: 150px;
+}
+.s-MasterData-TitleDialog > .size {
+  width: 650px;
+}
+.s-MasterData-TitleDialog .caption {
+  width: 150px;
+}

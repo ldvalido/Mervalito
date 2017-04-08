@@ -18,13 +18,17 @@ namespace Mervalito.MasterData {
         IdRentType?: number;
         Tir?: number;
         MinimumQuantity?: number;
+        IdBondRating?: number;
         IdPaymentPeriodDescription?: string;
         IdPaymentPeriodDays?: number;
         IdCurrencyDescription?: string;
         IdCurrencySymbol?: string;
+        IdCurrencyRate?: number;
         IdTitleTypeDescription?: string;
         IdBondTypeDescription?: string;
         IdRentTypeDescription?: string;
+        IdBondRatingSymbol?: string;
+        IdBondRatingDescription?: string;
     }
 
     export namespace TitleRow {
@@ -50,16 +54,20 @@ namespace Mervalito.MasterData {
             export declare const IdRentType;
             export declare const Tir;
             export declare const MinimumQuantity;
+            export declare const IdBondRating;
             export declare const IdPaymentPeriodDescription: string;
             export declare const IdPaymentPeriodDays: string;
             export declare const IdCurrencyDescription: string;
             export declare const IdCurrencySymbol: string;
+            export declare const IdCurrencyRate: string;
             export declare const IdTitleTypeDescription: string;
             export declare const IdBondTypeDescription: string;
             export declare const IdRentTypeDescription: string;
+            export declare const IdBondRatingSymbol: string;
+            export declare const IdBondRatingDescription: string;
         }
 
-        ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'MinimumQuantity', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(x => (<any>Fields)[x] = x);
+        ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'MinimumQuantity', 'IdBondRating', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdCurrencyRate', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription', 'IdBondRatingSymbol', 'IdBondRatingDescription'].forEach(x => (<any>Fields)[x] = x);
     }
 }
 

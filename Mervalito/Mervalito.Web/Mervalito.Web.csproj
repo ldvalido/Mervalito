@@ -1602,6 +1602,14 @@
     <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundEditor.ts" />
     <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundEditorDialog.ts" />
     <TypeScriptCompile Include="Modules\MasterData\Currency\CurrencyEditorDialog.ts" />
+    <Content Include="Modules\MasterData\BondRating\BondRatingIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondRatingRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondRatingService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.BondRatingForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingDialog.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingEditor.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingEditorDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1832,6 +1840,12 @@
     <Compile Include="Modules\MutualFund\MutualFund\MutualFundRepository.cs" />
     <Compile Include="Modules\MutualFund\MutualFund\MutualFundEndpoint.cs" />
     <Compile Include="Modules\MutualFund\MutualFund\MutualFundPage.cs" />
+    <Compile Include="Modules\MasterData\BondRating\BondRatingRow.cs" />
+    <Compile Include="Modules\MasterData\BondRating\BondRatingColumns.cs" />
+    <Compile Include="Modules\MasterData\BondRating\BondRatingForm.cs" />
+    <Compile Include="Modules\MasterData\BondRating\BondRatingRepository.cs" />
+    <Compile Include="Modules\MasterData\BondRating\BondRatingEndpoint.cs" />
+    <Compile Include="Modules\MasterData\BondRating\BondRatingPage.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
