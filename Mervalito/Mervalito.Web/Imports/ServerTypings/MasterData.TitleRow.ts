@@ -17,6 +17,7 @@ namespace Mervalito.MasterData {
         IdBondType?: number;
         IdRentType?: number;
         Tir?: number;
+        MinimumQuantity?: number;
         IdPaymentPeriodDescription?: string;
         IdPaymentPeriodDays?: number;
         IdCurrencyDescription?: string;
@@ -48,6 +49,7 @@ namespace Mervalito.MasterData {
             export declare const IdBondType;
             export declare const IdRentType;
             export declare const Tir;
+            export declare const MinimumQuantity;
             export declare const IdPaymentPeriodDescription: string;
             export declare const IdPaymentPeriodDays: string;
             export declare const IdCurrencyDescription: string;
@@ -57,7 +59,7 @@ namespace Mervalito.MasterData {
             export declare const IdRentTypeDescription: string;
         }
 
-        ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(x => (<any>Fields)[x] = x);
+        ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'MinimumQuantity', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(x => (<any>Fields)[x] = x);
     }
 }
 

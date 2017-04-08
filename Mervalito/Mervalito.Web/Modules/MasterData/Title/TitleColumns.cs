@@ -26,6 +26,7 @@ namespace Mervalito.MasterData.Columns
         public DateTime RentDate { get; set; }
         public Double RentAmmount { get; set; }
         public Double Price { get; set; }
+        public Double Tir { get; set; }
         [Width(100)]
         public String IdPaymentPeriodDescription { get; set; }
         [Width(100)]
@@ -35,7 +36,7 @@ namespace Mervalito.MasterData.Columns
         public String IdCurrencyDescription { get; set; }
         public String IdTitleTypeDescription { get; set; }
         public String IdBondTypeDescription { get; set; }
-        public String IdRentTypeDescription { get; set; }        
-        public Double Tir { get; set; }
+        public String IdRentTypeDescription { get; set; }   
+        public Int32 MinimumQuantity { get; set; }
     }
 }

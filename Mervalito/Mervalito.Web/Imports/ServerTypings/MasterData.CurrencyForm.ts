@@ -8,7 +8,8 @@ namespace Mervalito.MasterData {
     export interface CurrencyForm {
         Description: Serenity.StringEditor;
         Symbol: Serenity.StringEditor;
+        Rate: Serenity.DecimalEditor;
     }
 
-    [['Description', () => Serenity.StringEditor], ['Symbol', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(CurrencyForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['Description', () => Serenity.StringEditor], ['Symbol', () => Serenity.StringEditor], ['Rate', () => Serenity.DecimalEditor]].forEach(x => Object.defineProperty(CurrencyForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }

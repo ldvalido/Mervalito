@@ -18,5 +18,6 @@ namespace Mervalito.MasterData.Columns
         [EditLink]
         public String Description { get; set; }
         public String Symbol { get; set; }
+        public Double Rate { get; set; }
     }
 }

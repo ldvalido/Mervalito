@@ -382,7 +382,7 @@ var Mervalito;
         }(Serenity.PrefixedContext));
         CurrencyForm.formKey = 'MasterData.Currency';
         MasterData.CurrencyForm = CurrencyForm;
-        [['Description', function () { return Serenity.StringEditor; }], ['Symbol', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(CurrencyForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Description', function () { return Serenity.StringEditor; }], ['Symbol', function () { return Serenity.StringEditor; }], ['Rate', function () { return Serenity.DecimalEditor; }]].forEach(function (x) { return Object.defineProperty(CurrencyForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -397,7 +397,7 @@ var Mervalito;
             var Fields;
             (function (Fields) {
             })(Fields = CurrencyRow.Fields || (CurrencyRow.Fields = {}));
-            ['IdCurrency', 'Description', 'Symbol'].forEach(function (x) { return Fields[x] = x; });
+            ['IdCurrency', 'Description', 'Symbol', 'Rate'].forEach(function (x) { return Fields[x] = x; });
         })(CurrencyRow = MasterData.CurrencyRow || (MasterData.CurrencyRow = {}));
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
@@ -529,7 +529,7 @@ var Mervalito;
         }(Serenity.PrefixedContext));
         TitleForm.formKey = 'MasterData.Title';
         MasterData.TitleForm = TitleForm;
-        [['AmortizationDate', function () { return Serenity.DateEditor; }], ['AmortizationAmmount', function () { return Serenity.DecimalEditor; }], ['RentDate', function () { return Serenity.DateEditor; }], ['RentAmmount', function () { return Serenity.DecimalEditor; }], ['Price', function () { return Serenity.DecimalEditor; }], ['IdPaymentPeriod', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdTitleType', function () { return Serenity.IntegerEditor; }], ['Symbol', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IdBondType', function () { return Serenity.IntegerEditor; }], ['IdRentType', function () { return Serenity.IntegerEditor; }], ['Tir', function () { return Serenity.DecimalEditor; }]].forEach(function (x) { return Object.defineProperty(TitleForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['AmortizationDate', function () { return Serenity.DateEditor; }], ['AmortizationAmmount', function () { return Serenity.DecimalEditor; }], ['RentDate', function () { return Serenity.DateEditor; }], ['RentAmmount', function () { return Serenity.DecimalEditor; }], ['Price', function () { return Serenity.DecimalEditor; }], ['IdPaymentPeriod', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['IdTitleType', function () { return Serenity.IntegerEditor; }], ['Symbol', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IdBondType', function () { return Serenity.IntegerEditor; }], ['IdRentType', function () { return Serenity.IntegerEditor; }], ['Tir', function () { return Serenity.DecimalEditor; }], ['MinimumQuantity', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(TitleForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -544,7 +544,7 @@ var Mervalito;
             var Fields;
             (function (Fields) {
             })(Fields = TitleRow.Fields || (TitleRow.Fields = {}));
-            ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(function (x) { return Fields[x] = x; });
+            ['IdTitle', 'AmortizationDate', 'AmortizationAmmount', 'RentDate', 'RentAmmount', 'Price', 'IdPaymentPeriod', 'StartDate', 'EndDate', 'IdCurrency', 'IdTitleType', 'Symbol', 'Name', 'IdBondType', 'IdRentType', 'Tir', 'MinimumQuantity', 'IdPaymentPeriodDescription', 'IdPaymentPeriodDays', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdTitleTypeDescription', 'IdBondTypeDescription', 'IdRentTypeDescription'].forEach(function (x) { return Fields[x] = x; });
         })(TitleRow = MasterData.TitleRow || (MasterData.TitleRow = {}));
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
@@ -2916,7 +2916,7 @@ var Mervalito;
                 return _super.call(this, container) || this;
             }
             CurrencyEditor.prototype.getColumnsKey = function () { return 'MasterData.Currency'; };
-            CurrencyEditor.prototype.getDialogType = function () { return CurrencyEditorDialog; };
+            CurrencyEditor.prototype.getDialogType = function () { return MasterData.CurrencyEditorDialog; };
             CurrencyEditor.prototype.getLocalTextPrefix = function () { return MasterData.CurrencyRow.localTextPrefix; };
             return CurrencyEditor;
         }(Mervalito.Common.GridEditorBase));
@@ -2924,6 +2924,30 @@ var Mervalito;
             Serenity.Decorators.registerClass()
         ], CurrencyEditor);
         MasterData.CurrencyEditor = CurrencyEditor;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CurrencyEditorDialog = (function (_super) {
+            __extends(CurrencyEditorDialog, _super);
+            function CurrencyEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MasterData.CurrencyForm(_this.idPrefix);
+                return _this;
+            }
+            CurrencyEditorDialog.prototype.getFormKey = function () { return MasterData.CurrencyForm.formKey; };
+            CurrencyEditorDialog.prototype.getLocalTextPrefix = function () { return MasterData.CurrencyRow.localTextPrefix; };
+            CurrencyEditorDialog.prototype.getNameProperty = function () { return MasterData.CurrencyRow.nameProperty; };
+            return CurrencyEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        CurrencyEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], CurrencyEditorDialog);
+        MasterData.CurrencyEditorDialog = CurrencyEditorDialog;
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;

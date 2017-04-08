@@ -4,6 +4,7 @@ namespace Mervalito.MasterData {
         IdCurrency?: number;
         Description?: string;
         Symbol?: string;
+        Rate?: number;
     }
 
     export namespace CurrencyRow {
@@ -15,9 +16,10 @@ namespace Mervalito.MasterData {
             export declare const IdCurrency;
             export declare const Description;
             export declare const Symbol;
+            export declare const Rate;
         }
 
-        ['IdCurrency', 'Description', 'Symbol'].forEach(x => (<any>Fields)[x] = x);
+        ['IdCurrency', 'Description', 'Symbol', 'Rate'].forEach(x => (<any>Fields)[x] = x);
     }
 }
 

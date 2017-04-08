@@ -7575,3 +7575,21 @@ section.content > .s-DataGrid {
 .s-MutualFund-CompanyManagerDialog .caption {
   width: 150px;
 }
+.s-MasterData-TitleDialog > .size {
+  width: 650px;
+}
+.s-MasterData-TitleDialog .caption {
+  width: 150px;
+}
+.s-MasterData-CurrencyDialog > .size {
+  width: 650px;
+}
+.s-MasterData-CurrencyDialog .caption {
+  width: 150px;
+}
+.s-MasterData-CurrencyDialog > .size {
+  width: 650px;
+}
+.s-MasterData-CurrencyDialog .caption {
+  width: 150px;
+}

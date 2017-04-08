@@ -483,6 +483,7 @@ declare namespace Mervalito.MasterData {
     interface CurrencyForm {
         Description: Serenity.StringEditor;
         Symbol: Serenity.StringEditor;
+        Rate: Serenity.DecimalEditor;
     }
 }
 declare namespace Mervalito.MasterData {
@@ -490,6 +491,7 @@ declare namespace Mervalito.MasterData {
         IdCurrency?: number;
         Description?: string;
         Symbol?: string;
+        Rate?: number;
     }
     namespace CurrencyRow {
         const idProperty = "IdCurrency";
@@ -499,6 +501,7 @@ declare namespace Mervalito.MasterData {
             const IdCurrency: any;
             const Description: any;
             const Symbol: any;
+            const Rate: any;
         }
     }
 }
@@ -622,6 +625,7 @@ declare namespace Mervalito.MasterData {
         IdBondType: Serenity.IntegerEditor;
         IdRentType: Serenity.IntegerEditor;
         Tir: Serenity.DecimalEditor;
+        MinimumQuantity: Serenity.IntegerEditor;
     }
 }
 declare namespace Mervalito.MasterData {
@@ -642,6 +646,7 @@ declare namespace Mervalito.MasterData {
         IdBondType?: number;
         IdRentType?: number;
         Tir?: number;
+        MinimumQuantity?: number;
         IdPaymentPeriodDescription?: string;
         IdPaymentPeriodDays?: number;
         IdCurrencyDescription?: string;
@@ -671,6 +676,7 @@ declare namespace Mervalito.MasterData {
             const IdBondType: any;
             const IdRentType: any;
             const Tir: any;
+            const MinimumQuantity: any;
             const IdPaymentPeriodDescription: string;
             const IdPaymentPeriodDays: string;
             const IdCurrencyDescription: string;
@@ -1417,9 +1423,17 @@ declare namespace Mervalito.MasterData {
 declare namespace Mervalito.MasterData {
     class CurrencyEditor extends Common.GridEditorBase<CurrencyRow> {
         protected getColumnsKey(): string;
-        protected getDialogType(): any;
+        protected getDialogType(): typeof CurrencyEditorDialog;
         protected getLocalTextPrefix(): string;
         constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CurrencyEditorDialog extends Common.GridEditorDialog<CurrencyRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: CurrencyForm;
     }
 }
 declare namespace Mervalito.MasterData {

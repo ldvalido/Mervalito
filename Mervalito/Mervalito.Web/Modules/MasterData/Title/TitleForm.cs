@@ -29,5 +29,6 @@ namespace Mervalito.MasterData.Forms
         public Int32 IdPaymentPeriod { get; set; }
         
         public Double Tir { get; set; }
+        public Int32 MinimumQuantity { get; set; }
     }
 }

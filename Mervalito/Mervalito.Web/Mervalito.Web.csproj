@@ -1601,6 +1601,7 @@
     <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundDialog.ts" />
     <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundEditor.ts" />
     <TypeScriptCompile Include="Modules\MutualFund\MutualFund\MutualFundEditorDialog.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Currency\CurrencyEditorDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

@@ -36,6 +36,13 @@ namespace Mervalito.MasterData.Entities
             set { Fields.Symbol[this] = value; }
         }
 
+        [DisplayName("Rate"), NotNull]
+        public Double? Rate
+        {
+            get { return Fields.Rate[this]; }
+            set { Fields.Rate[this] = value; }
+        }
+
         IIdField IIdRow.IdField
         {
             get { return Fields.IdCurrency; }
@@ -58,6 +65,7 @@ namespace Mervalito.MasterData.Entities
             public Int32Field IdCurrency;
             public StringField Description;
             public StringField Symbol;
+            public DoubleField Rate;
 
             public RowFields()
                 : base()

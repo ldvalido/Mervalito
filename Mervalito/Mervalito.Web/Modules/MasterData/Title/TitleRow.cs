@@ -134,6 +134,13 @@ namespace Mervalito.MasterData.Entities
             set { Fields.Tir[this] = value; }
         }
 
+        [DisplayName("Minimum Quantity"), NotNull]
+        public Int32? MinimumQuantity
+        {
+            get { return Fields.MinimumQuantity[this]; }
+            set { Fields.MinimumQuantity[this] = value; }
+        }
+
         [DisplayName("Id Payment Period Description"), Expression("jIdPaymentPeriod.[Description]")]
         public String IdPaymentPeriodDescription
         {
@@ -218,6 +225,7 @@ namespace Mervalito.MasterData.Entities
             public Int32Field IdBondType;
             public Int32Field IdRentType;
             public DoubleField Tir;
+            public Int32Field MinimumQuantity;
 
             public StringField IdPaymentPeriodDescription;
             public Int32Field IdPaymentPeriodDays;

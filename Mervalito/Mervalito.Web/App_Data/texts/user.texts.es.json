@@ -33,6 +33,7 @@
   "Db.MasterData.Title.IdTitleType": "Tipo de Titulo",
   "Db.MasterData.Title.IdTitleTypeDescription": "Tipo de Titulo",
   "Db.MasterData.Title.IsLinked": "Dolar Linked",
+  "Db.MasterData.Title.MinimumQuantity": "Cantidad Nominal",
   "Db.MasterData.Title.Name": "Nombre",
   "Db.MasterData.Title.Price": "Precio",
   "Db.MasterData.Title.RentAmmount": "Monto de Renta",
