@@ -11,6 +11,7 @@ namespace Mervalito.Storage.Mapping
             Property(t => t.Id).HasColumnName("IdCurrency");
             Property(t => t.Description).HasColumnName("Description");
             Property(t => t.Symbol).HasColumnName("Symbol");
+            Property(t => t.Rate).HasColumnName("Rate").HasColumnType("float");
         }
     }
 }

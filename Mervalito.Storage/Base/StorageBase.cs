@@ -94,7 +94,7 @@ namespace Mervalito.Storage.Base
         /// </summary>
         /// <param name="fncCriteria">The FNC criteria.</param>
         /// <returns></returns>
-        public IEnumerable<T> GetByCriteria(Func<T, bool> fncCriteria)
+        public virtual IEnumerable<T> GetByCriteria(Func<T, bool> fncCriteria)
         {
             return GetList().Where(fncCriteria);
         }

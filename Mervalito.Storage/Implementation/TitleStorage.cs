@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Mervalito.Model.Model;
 using Mervalito.Storage.Base;
 using Mervalito.Storage.Context;
@@ -48,6 +50,20 @@ namespace Mervalito.Storage.Implementation
         }
 
         #endregion
+
+        #endregion
+
+        #region Overrides of StorageBase<Title,int>
+
+        /// <summary>
+        /// Gets the by criteria.
+        /// </summary>
+        /// <param name="fncCriteria">The FNC criteria.</param>
+        /// <returns></returns>
+        public override IEnumerable<Title> GetByCriteria(Func<Title, bool> fncCriteria)
+        {
+            return GetAll().Where(fncCriteria);
+        }
 
         #endregion
     }

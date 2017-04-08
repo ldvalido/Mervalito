@@ -12,6 +12,7 @@ namespace Mervalito.Storage.Mapping
             Property(t => t.Description).HasColumnName("Name");
             Property(t => t.AmortizationAmount).HasColumnName("AmortizationAmmount");
             Property(t => t.RentAmount).HasColumnName("RentAmmount");
+            Property(t => t.MinimumQuantity).HasColumnName("MinimumQuantity");
 
             HasRequired(t => t.PaymentPeriod).WithMany().Map(p => p.MapKey("IdPaymentPeriod")).WillCascadeOnDelete(false);
             HasRequired(t => t.BondType).WithMany().Map(p => p.MapKey("IdbondType")).WillCascadeOnDelete(false);
