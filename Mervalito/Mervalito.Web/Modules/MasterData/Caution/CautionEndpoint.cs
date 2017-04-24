@@ -1,8 +1,4 @@
 ﻿
-using System;
-using Serenity.Reporting;
-using Serenity.Web;
-
 namespace Mervalito.MasterData.Endpoints
 {
     using Serenity;
@@ -10,12 +6,12 @@ namespace Mervalito.MasterData.Endpoints
     using Serenity.Services;
     using System.Data;
     using System.Web.Mvc;
-    using MyRepository = Repositories.TitleRepository;
-    using MyRow = Entities.TitleRow;
+    using MyRepository = Repositories.CautionRepository;
+    using MyRow = Entities.CautionRow;
 
-    [RoutePrefix("Services/MasterData/Title"), Route("{action}")]
+    [RoutePrefix("Services/MasterData/Caution"), Route("{action}")]
     [ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
-    public class TitleController : ServiceEndpoint
+    public class CautionController : ServiceEndpoint
     {
         [HttpPost, AuthorizeCreate(typeof(MyRow))]
         public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
@@ -33,15 +29,6 @@ namespace Mervalito.MasterData.Endpoints
         public DeleteResponse Delete(IUnitOfWork uow, DeleteRequest request)
         {
             return new MyRepository().Delete(uow, request);
-        }
-
-        public FileContentResult ListExcel(IDbConnection connection, ListRequest request)
-        {
-            var data = List(connection, request).Entities;
-            var report = new DynamicDataReport(data, request.IncludeColumns, typeof(Columns.TitleColumns));
-            var bytes = new ReportRepository().Render(report);
-            var reportName = $"{GetType().Name.Replace("Controller", string.Empty)}_";
-            return ExcelContentResult.Create(bytes, reportName + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".xlsx");
         }
 
         public RetrieveResponse<MyRow> Retrieve(IDbConnection connection, RetrieveRequest request)

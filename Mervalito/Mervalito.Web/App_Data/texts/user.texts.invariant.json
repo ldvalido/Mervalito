@@ -1,3 +1,10 @@
 {
-  "Db.MasterData.Title.Tir": "TIR"
+  "Db.Administration.Settings.EntityPlural": "Configuraciones",
+  "Db.Administration.Settings.EntitySingular": "Configuración",
+  "Db.Administration.Settings.IdSetting": "ID",
+  "Db.Administration.Settings.SettingName": "Name",
+  "Db.Administration.Settings.SettingValue": "Valor",
+  "Db.MasterData.Title.Tir": "TIR",
+  "Navigation.Administration/Settings": "Configuraciones",
+  "Site.Layout.GeneralSettings": "Configuraciones"
 }

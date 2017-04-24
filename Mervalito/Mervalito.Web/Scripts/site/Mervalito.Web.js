@@ -154,6 +154,55 @@ var Mervalito;
 (function (Mervalito) {
     var Administration;
     (function (Administration) {
+        var SettingsForm = (function (_super) {
+            __extends(SettingsForm, _super);
+            function SettingsForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return SettingsForm;
+        }(Serenity.PrefixedContext));
+        SettingsForm.formKey = 'Administration.Settings';
+        Administration.SettingsForm = SettingsForm;
+        [['SettingName', function () { return Serenity.StringEditor; }], ['SettingValue', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SettingsForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
+        var SettingsRow;
+        (function (SettingsRow) {
+            SettingsRow.idProperty = 'IdSetting';
+            SettingsRow.nameProperty = 'SettingName';
+            SettingsRow.localTextPrefix = 'Administration.Settings';
+            var Fields;
+            (function (Fields) {
+            })(Fields = SettingsRow.Fields || (SettingsRow.Fields = {}));
+            ['IdSetting', 'SettingName', 'SettingValue'].forEach(function (x) { return Fields[x] = x; });
+        })(SettingsRow = Administration.SettingsRow || (Administration.SettingsRow = {}));
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
+        var SettingsService;
+        (function (SettingsService) {
+            SettingsService.baseUrl = 'Administration/Settings';
+            var Methods;
+            (function (Methods) {
+            })(Methods = SettingsService.Methods || (SettingsService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                SettingsService[x] = function (r, s, o) { return Q.serviceRequest(SettingsService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = SettingsService.baseUrl + '/' + x;
+            });
+        })(SettingsService = Administration.SettingsService || (Administration.SettingsService = {}));
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
         var TranslationService;
         (function (TranslationService) {
             TranslationService.baseUrl = 'Administration/Translation';
@@ -416,6 +465,54 @@ var Mervalito;
                 Methods[x] = BondTypeService.baseUrl + '/' + x;
             });
         })(BondTypeService = MasterData.BondTypeService || (MasterData.BondTypeService = {}));
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CautionForm = (function (_super) {
+            __extends(CautionForm, _super);
+            function CautionForm() {
+                return _super.apply(this, arguments) || this;
+            }
+            return CautionForm;
+        }(Serenity.PrefixedContext));
+        CautionForm.formKey = 'MasterData.Caution';
+        MasterData.CautionForm = CautionForm;
+        [['Days', function () { return Serenity.IntegerEditor; }], ['IdCurrency', function () { return Serenity.IntegerEditor; }], ['Percentage', function () { return Serenity.DecimalEditor; }]].forEach(function (x) { return Object.defineProperty(CautionForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CautionRow;
+        (function (CautionRow) {
+            CautionRow.idProperty = 'IdCaution';
+            CautionRow.localTextPrefix = 'MasterData.Caution';
+            var Fields;
+            (function (Fields) {
+            })(Fields = CautionRow.Fields || (CautionRow.Fields = {}));
+            ['IdCaution', 'Days', 'IdCurrency', 'Percentage', 'IdCurrencyDescription', 'IdCurrencySymbol', 'IdCurrencyRate'].forEach(function (x) { return Fields[x] = x; });
+        })(CautionRow = MasterData.CautionRow || (MasterData.CautionRow = {}));
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CautionService;
+        (function (CautionService) {
+            CautionService.baseUrl = 'MasterData/Caution';
+            var Methods;
+            (function (Methods) {
+            })(Methods = CautionService.Methods || (CautionService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                CautionService[x] = function (r, s, o) { return Q.serviceRequest(CautionService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = CautionService.baseUrl + '/' + x;
+            });
+        })(CautionService = MasterData.CautionService || (MasterData.CautionService = {}));
     })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -1062,6 +1159,279 @@ var Mervalito;
             Serenity.Decorators.registerClass()
         ], RolePermissionDialog);
         Administration.RolePermissionDialog = RolePermissionDialog;
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
+        var SettingsDialog = (function (_super) {
+            __extends(SettingsDialog, _super);
+            function SettingsDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new Administration.SettingsForm(_this.idPrefix);
+                return _this;
+            }
+            SettingsDialog.prototype.getFormKey = function () { return Administration.SettingsForm.formKey; };
+            SettingsDialog.prototype.getIdProperty = function () { return Administration.SettingsRow.idProperty; };
+            SettingsDialog.prototype.getLocalTextPrefix = function () { return Administration.SettingsRow.localTextPrefix; };
+            SettingsDialog.prototype.getNameProperty = function () { return Administration.SettingsRow.nameProperty; };
+            SettingsDialog.prototype.getService = function () { return Administration.SettingsService.baseUrl; };
+            SettingsDialog.prototype.updateInterface = function () {
+                _super.prototype.updateInterface.call(this);
+                this.deleteButton.remove();
+            };
+            return SettingsDialog;
+        }(Serenity.EntityDialog));
+        SettingsDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], SettingsDialog);
+        Administration.SettingsDialog = SettingsDialog;
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Common;
+    (function (Common) {
+        var GridEditorBase = (function (_super) {
+            __extends(GridEditorBase, _super);
+            function GridEditorBase(container) {
+                var _this = _super.call(this, container) || this;
+                _this.nextId = 1;
+                return _this;
+            }
+            GridEditorBase.prototype.getIdProperty = function () { return "__id"; };
+            GridEditorBase.prototype.id = function (entity) {
+                return entity[this.getIdProperty()];
+            };
+            GridEditorBase.prototype.getNextId = function () {
+                return "`" + this.nextId++;
+            };
+            GridEditorBase.prototype.setNewId = function (entity) {
+                entity[this.getIdProperty()] = this.getNextId();
+            };
+            GridEditorBase.prototype.save = function (opt, callback) {
+                var _this = this;
+                var request = opt.request;
+                var row = Q.deepClone(request.Entity);
+                var id = this.id(row);
+                if (id == null) {
+                    row[this.getIdProperty()] = this.getNextId();
+                }
+                if (!this.validateEntity(row, id)) {
+                    return;
+                }
+                var items = this.view.getItems().slice();
+                if (id == null) {
+                    items.push(row);
+                }
+                else {
+                    var index = Q.indexOf(items, function (x) { return _this.id(x) === id; });
+                    items[index] = Q.deepClone({}, items[index], row);
+                }
+                this.setEntities(items);
+                callback({});
+            };
+            GridEditorBase.prototype.deleteEntity = function (id) {
+                this.view.deleteItem(id);
+                return true;
+            };
+            GridEditorBase.prototype.validateEntity = function (row, id) {
+                return true;
+            };
+            GridEditorBase.prototype.setEntities = function (items) {
+                this.view.setItems(items, true);
+            };
+            GridEditorBase.prototype.getNewEntity = function () {
+                return {};
+            };
+            GridEditorBase.prototype.getButtons = function () {
+                var _this = this;
+                return [{
+                        title: this.getAddButtonCaption(),
+                        cssClass: 'add-button',
+                        onClick: function () {
+                            _this.createEntityDialog(_this.getItemType(), function (dlg) {
+                                var dialog = dlg;
+                                dialog.onSave = function (opt, callback) { return _this.save(opt, callback); };
+                                dialog.loadEntityAndOpenDialog(_this.getNewEntity());
+                            });
+                        }
+                    }];
+            };
+            GridEditorBase.prototype.editItem = function (entityOrId) {
+                var _this = this;
+                var id = entityOrId;
+                var item = this.view.getItemById(id);
+                this.createEntityDialog(this.getItemType(), function (dlg) {
+                    var dialog = dlg;
+                    dialog.onDelete = function (opt, callback) {
+                        if (!_this.deleteEntity(id)) {
+                            return;
+                        }
+                        callback({});
+                    };
+                    dialog.onSave = function (opt, callback) { return _this.save(opt, callback); };
+                    dialog.loadEntityAndOpenDialog(item);
+                });
+                ;
+            };
+            GridEditorBase.prototype.getEditValue = function (property, target) {
+                target[property.name] = this.value;
+            };
+            GridEditorBase.prototype.setEditValue = function (source, property) {
+                this.value = source[property.name];
+            };
+            Object.defineProperty(GridEditorBase.prototype, "value", {
+                get: function () {
+                    var p = this.getIdProperty();
+                    return this.view.getItems().map(function (x) {
+                        var y = Q.deepClone(x);
+                        var id = y[p];
+                        if (id && id.toString().charAt(0) == '`')
+                            delete y[p];
+                        return y;
+                    });
+                },
+                set: function (value) {
+                    var _this = this;
+                    var p = this.getIdProperty();
+                    this.view.setItems((value || []).map(function (x) {
+                        var y = Q.deepClone(x);
+                        if (y[p] == null)
+                            y[p] = "`" + _this.getNextId();
+                        return y;
+                    }), true);
+                },
+                enumerable: true,
+                configurable: true
+            });
+            GridEditorBase.prototype.getGridCanLoad = function () {
+                return false;
+            };
+            GridEditorBase.prototype.usePager = function () {
+                return false;
+            };
+            GridEditorBase.prototype.getInitialTitle = function () {
+                return null;
+            };
+            GridEditorBase.prototype.createQuickSearchInput = function () {
+            };
+            return GridEditorBase;
+        }(Serenity.EntityGrid));
+        GridEditorBase = __decorate([
+            Serenity.Decorators.registerClass([Serenity.IGetEditValue, Serenity.ISetEditValue]),
+            Serenity.Decorators.editor(),
+            Serenity.Decorators.element("<div/>")
+        ], GridEditorBase);
+        Common.GridEditorBase = GridEditorBase;
+    })(Common = Mervalito.Common || (Mervalito.Common = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
+        var SettingsEditor = (function (_super) {
+            __extends(SettingsEditor, _super);
+            function SettingsEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            SettingsEditor.prototype.getColumnsKey = function () { return 'Administration.Settings'; };
+            SettingsEditor.prototype.getDialogType = function () { return Administration.SettingsEditorDialog; };
+            SettingsEditor.prototype.getLocalTextPrefix = function () { return Administration.SettingsRow.localTextPrefix; };
+            return SettingsEditor;
+        }(Mervalito.Common.GridEditorBase));
+        SettingsEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], SettingsEditor);
+        Administration.SettingsEditor = SettingsEditor;
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Common;
+    (function (Common) {
+        var GridEditorDialog = (function (_super) {
+            __extends(GridEditorDialog, _super);
+            function GridEditorDialog() {
+                return _super.apply(this, arguments) || this;
+            }
+            GridEditorDialog.prototype.getIdProperty = function () { return "__id"; };
+            GridEditorDialog.prototype.destroy = function () {
+                this.onSave = null;
+                this.onDelete = null;
+                _super.prototype.destroy.call(this);
+            };
+            GridEditorDialog.prototype.updateInterface = function () {
+                _super.prototype.updateInterface.call(this);
+                // apply changes button doesn't work properly with in-memory grids yet
+                if (this.applyChangesButton) {
+                    this.applyChangesButton.hide();
+                }
+            };
+            GridEditorDialog.prototype.saveHandler = function (options, callback) {
+                this.onSave && this.onSave(options, callback);
+            };
+            GridEditorDialog.prototype.deleteHandler = function (options, callback) {
+                this.onDelete && this.onDelete(options, callback);
+            };
+            return GridEditorDialog;
+        }(Serenity.EntityDialog));
+        GridEditorDialog = __decorate([
+            Serenity.Decorators.registerClass()
+        ], GridEditorDialog);
+        Common.GridEditorDialog = GridEditorDialog;
+    })(Common = Mervalito.Common || (Mervalito.Common = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
+        var SettingsEditorDialog = (function (_super) {
+            __extends(SettingsEditorDialog, _super);
+            function SettingsEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new Administration.SettingsForm(_this.idPrefix);
+                return _this;
+            }
+            SettingsEditorDialog.prototype.getFormKey = function () { return Administration.SettingsForm.formKey; };
+            SettingsEditorDialog.prototype.getLocalTextPrefix = function () { return Administration.SettingsRow.localTextPrefix; };
+            SettingsEditorDialog.prototype.getNameProperty = function () { return Administration.SettingsRow.nameProperty; };
+            return SettingsEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        SettingsEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], SettingsEditorDialog);
+        Administration.SettingsEditorDialog = SettingsEditorDialog;
+    })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var Administration;
+    (function (Administration) {
+        var SettingsGrid = (function (_super) {
+            __extends(SettingsGrid, _super);
+            function SettingsGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SettingsGrid.prototype.getColumnsKey = function () { return 'Administration.Settings'; };
+            SettingsGrid.prototype.getDialogType = function () { return Administration.SettingsDialog; };
+            SettingsGrid.prototype.getIdProperty = function () { return Administration.SettingsRow.idProperty; };
+            SettingsGrid.prototype.getLocalTextPrefix = function () { return Administration.SettingsRow.localTextPrefix; };
+            SettingsGrid.prototype.getService = function () { return Administration.SettingsService.baseUrl; };
+            SettingsGrid.prototype.getButtons = function () {
+                return [];
+            };
+            return SettingsGrid;
+        }(Serenity.EntityGrid));
+        SettingsGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], SettingsGrid);
+        Administration.SettingsGrid = SettingsGrid;
     })(Administration = Mervalito.Administration || (Mervalito.Administration = {}));
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
@@ -2141,180 +2511,6 @@ var Mervalito;
 })(Mervalito || (Mervalito = {}));
 var Mervalito;
 (function (Mervalito) {
-    var Common;
-    (function (Common) {
-        var GridEditorBase = (function (_super) {
-            __extends(GridEditorBase, _super);
-            function GridEditorBase(container) {
-                var _this = _super.call(this, container) || this;
-                _this.nextId = 1;
-                return _this;
-            }
-            GridEditorBase.prototype.getIdProperty = function () { return "__id"; };
-            GridEditorBase.prototype.id = function (entity) {
-                return entity[this.getIdProperty()];
-            };
-            GridEditorBase.prototype.getNextId = function () {
-                return "`" + this.nextId++;
-            };
-            GridEditorBase.prototype.setNewId = function (entity) {
-                entity[this.getIdProperty()] = this.getNextId();
-            };
-            GridEditorBase.prototype.save = function (opt, callback) {
-                var _this = this;
-                var request = opt.request;
-                var row = Q.deepClone(request.Entity);
-                var id = this.id(row);
-                if (id == null) {
-                    row[this.getIdProperty()] = this.getNextId();
-                }
-                if (!this.validateEntity(row, id)) {
-                    return;
-                }
-                var items = this.view.getItems().slice();
-                if (id == null) {
-                    items.push(row);
-                }
-                else {
-                    var index = Q.indexOf(items, function (x) { return _this.id(x) === id; });
-                    items[index] = Q.deepClone({}, items[index], row);
-                }
-                this.setEntities(items);
-                callback({});
-            };
-            GridEditorBase.prototype.deleteEntity = function (id) {
-                this.view.deleteItem(id);
-                return true;
-            };
-            GridEditorBase.prototype.validateEntity = function (row, id) {
-                return true;
-            };
-            GridEditorBase.prototype.setEntities = function (items) {
-                this.view.setItems(items, true);
-            };
-            GridEditorBase.prototype.getNewEntity = function () {
-                return {};
-            };
-            GridEditorBase.prototype.getButtons = function () {
-                var _this = this;
-                return [{
-                        title: this.getAddButtonCaption(),
-                        cssClass: 'add-button',
-                        onClick: function () {
-                            _this.createEntityDialog(_this.getItemType(), function (dlg) {
-                                var dialog = dlg;
-                                dialog.onSave = function (opt, callback) { return _this.save(opt, callback); };
-                                dialog.loadEntityAndOpenDialog(_this.getNewEntity());
-                            });
-                        }
-                    }];
-            };
-            GridEditorBase.prototype.editItem = function (entityOrId) {
-                var _this = this;
-                var id = entityOrId;
-                var item = this.view.getItemById(id);
-                this.createEntityDialog(this.getItemType(), function (dlg) {
-                    var dialog = dlg;
-                    dialog.onDelete = function (opt, callback) {
-                        if (!_this.deleteEntity(id)) {
-                            return;
-                        }
-                        callback({});
-                    };
-                    dialog.onSave = function (opt, callback) { return _this.save(opt, callback); };
-                    dialog.loadEntityAndOpenDialog(item);
-                });
-                ;
-            };
-            GridEditorBase.prototype.getEditValue = function (property, target) {
-                target[property.name] = this.value;
-            };
-            GridEditorBase.prototype.setEditValue = function (source, property) {
-                this.value = source[property.name];
-            };
-            Object.defineProperty(GridEditorBase.prototype, "value", {
-                get: function () {
-                    var p = this.getIdProperty();
-                    return this.view.getItems().map(function (x) {
-                        var y = Q.deepClone(x);
-                        var id = y[p];
-                        if (id && id.toString().charAt(0) == '`')
-                            delete y[p];
-                        return y;
-                    });
-                },
-                set: function (value) {
-                    var _this = this;
-                    var p = this.getIdProperty();
-                    this.view.setItems((value || []).map(function (x) {
-                        var y = Q.deepClone(x);
-                        if (y[p] == null)
-                            y[p] = "`" + _this.getNextId();
-                        return y;
-                    }), true);
-                },
-                enumerable: true,
-                configurable: true
-            });
-            GridEditorBase.prototype.getGridCanLoad = function () {
-                return false;
-            };
-            GridEditorBase.prototype.usePager = function () {
-                return false;
-            };
-            GridEditorBase.prototype.getInitialTitle = function () {
-                return null;
-            };
-            GridEditorBase.prototype.createQuickSearchInput = function () {
-            };
-            return GridEditorBase;
-        }(Serenity.EntityGrid));
-        GridEditorBase = __decorate([
-            Serenity.Decorators.registerClass([Serenity.IGetEditValue, Serenity.ISetEditValue]),
-            Serenity.Decorators.editor(),
-            Serenity.Decorators.element("<div/>")
-        ], GridEditorBase);
-        Common.GridEditorBase = GridEditorBase;
-    })(Common = Mervalito.Common || (Mervalito.Common = {}));
-})(Mervalito || (Mervalito = {}));
-var Mervalito;
-(function (Mervalito) {
-    var Common;
-    (function (Common) {
-        var GridEditorDialog = (function (_super) {
-            __extends(GridEditorDialog, _super);
-            function GridEditorDialog() {
-                return _super.apply(this, arguments) || this;
-            }
-            GridEditorDialog.prototype.getIdProperty = function () { return "__id"; };
-            GridEditorDialog.prototype.destroy = function () {
-                this.onSave = null;
-                this.onDelete = null;
-                _super.prototype.destroy.call(this);
-            };
-            GridEditorDialog.prototype.updateInterface = function () {
-                _super.prototype.updateInterface.call(this);
-                // apply changes button doesn't work properly with in-memory grids yet
-                if (this.applyChangesButton) {
-                    this.applyChangesButton.hide();
-                }
-            };
-            GridEditorDialog.prototype.saveHandler = function (options, callback) {
-                this.onSave && this.onSave(options, callback);
-            };
-            GridEditorDialog.prototype.deleteHandler = function (options, callback) {
-                this.onDelete && this.onDelete(options, callback);
-            };
-            return GridEditorDialog;
-        }(Serenity.EntityDialog));
-        GridEditorDialog = __decorate([
-            Serenity.Decorators.registerClass()
-        ], GridEditorDialog);
-        Common.GridEditorDialog = GridEditorDialog;
-    })(Common = Mervalito.Common || (Mervalito.Common = {}));
-})(Mervalito || (Mervalito = {}));
-var Mervalito;
-(function (Mervalito) {
     var LanguageList;
     (function (LanguageList) {
         function getValue() {
@@ -3025,6 +3221,96 @@ var Mervalito;
 (function (Mervalito) {
     var MasterData;
     (function (MasterData) {
+        var CautionDialog = (function (_super) {
+            __extends(CautionDialog, _super);
+            function CautionDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MasterData.CautionForm(_this.idPrefix);
+                return _this;
+            }
+            CautionDialog.prototype.getFormKey = function () { return MasterData.CautionForm.formKey; };
+            CautionDialog.prototype.getIdProperty = function () { return MasterData.CautionRow.idProperty; };
+            CautionDialog.prototype.getLocalTextPrefix = function () { return MasterData.CautionRow.localTextPrefix; };
+            CautionDialog.prototype.getService = function () { return MasterData.CautionService.baseUrl; };
+            return CautionDialog;
+        }(Serenity.EntityDialog));
+        CautionDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], CautionDialog);
+        MasterData.CautionDialog = CautionDialog;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CautionEditor = (function (_super) {
+            __extends(CautionEditor, _super);
+            function CautionEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            CautionEditor.prototype.getColumnsKey = function () { return 'MasterData.Caution'; };
+            CautionEditor.prototype.getDialogType = function () { return MasterData.CautionEditorDialog; };
+            CautionEditor.prototype.getLocalTextPrefix = function () { return MasterData.CautionRow.localTextPrefix; };
+            return CautionEditor;
+        }(Mervalito.Common.GridEditorBase));
+        CautionEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], CautionEditor);
+        MasterData.CautionEditor = CautionEditor;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CautionEditorDialog = (function (_super) {
+            __extends(CautionEditorDialog, _super);
+            function CautionEditorDialog() {
+                var _this = _super.apply(this, arguments) || this;
+                _this.form = new MasterData.CautionForm(_this.idPrefix);
+                return _this;
+            }
+            CautionEditorDialog.prototype.getFormKey = function () { return MasterData.CautionForm.formKey; };
+            CautionEditorDialog.prototype.getLocalTextPrefix = function () { return MasterData.CautionRow.localTextPrefix; };
+            return CautionEditorDialog;
+        }(Mervalito.Common.GridEditorDialog));
+        CautionEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], CautionEditorDialog);
+        MasterData.CautionEditorDialog = CautionEditorDialog;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
+        var CautionGrid = (function (_super) {
+            __extends(CautionGrid, _super);
+            function CautionGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CautionGrid.prototype.getColumnsKey = function () { return 'MasterData.Caution'; };
+            CautionGrid.prototype.getDialogType = function () { return MasterData.CautionDialog; };
+            CautionGrid.prototype.getIdProperty = function () { return MasterData.CautionRow.idProperty; };
+            CautionGrid.prototype.getLocalTextPrefix = function () { return MasterData.CautionRow.localTextPrefix; };
+            CautionGrid.prototype.getService = function () { return MasterData.CautionService.baseUrl; };
+            return CautionGrid;
+        }(Serenity.EntityGrid));
+        CautionGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], CautionGrid);
+        MasterData.CautionGrid = CautionGrid;
+    })(MasterData = Mervalito.MasterData || (Mervalito.MasterData = {}));
+})(Mervalito || (Mervalito = {}));
+var Mervalito;
+(function (Mervalito) {
+    var MasterData;
+    (function (MasterData) {
         var CurrencyDialog = (function (_super) {
             __extends(CurrencyDialog, _super);
             function CurrencyDialog() {
@@ -3341,6 +3627,37 @@ var Mervalito;
             TitleGrid.prototype.getIdProperty = function () { return MasterData.TitleRow.idProperty; };
             TitleGrid.prototype.getLocalTextPrefix = function () { return MasterData.TitleRow.localTextPrefix; };
             TitleGrid.prototype.getService = function () { return MasterData.TitleService.baseUrl; };
+            TitleGrid.prototype.getButtons = function () {
+                var _this = this;
+                var buttons = _super.prototype.getButtons.call(this);
+                var MyRow = MasterData.TitleRow.Fields;
+                var exportButton = {
+                    title: Q.text('Db.MasterData.Title.UpdateValues'),
+                    onClick: function (e) {
+                        var self = _this;
+                        var url = Q.resolveUrl('~/API/titles/updateRates');
+                        $.ajax({
+                            method: 'PUT',
+                            url: url,
+                            sucess: function (data) {
+                                Q.notifySuccess(Q.text('Db.MasterData.Title.SuccessUpdate'));
+                                self.refresh();
+                            }
+                        });
+                    },
+                    cssClass: 'apply-changes-button'
+                };
+                buttons.push(Mervalito.Common.ExcelExportHelper.createToolButton({
+                    grid: this,
+                    onViewSubmit: function () { return _this.onViewSubmit(); },
+                    service: MasterData.TitleService.baseUrl + '/ListExcel',
+                    separator: true,
+                    //hint: "Export to excel",
+                    hint: Q.text('Db.MasterData.Title.ExportToExcel')
+                }));
+                buttons.push(exportButton);
+                return buttons;
+            };
             return TitleGrid;
         }(Serenity.EntityGrid));
         TitleGrid = __decorate([

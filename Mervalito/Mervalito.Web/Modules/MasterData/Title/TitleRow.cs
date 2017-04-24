@@ -127,7 +127,7 @@ namespace Mervalito.MasterData.Entities
             set { Fields.IdRentType[this] = value; }
         }
 
-        [DisplayName("Tir"), Column("TIR"), NotNull,Visible(false)]
+        [DisplayName("Tir"), Column("TIR"), NotNull,ReadOnly(true)]
         public Double? Tir
         {
             get { return Fields.Tir[this]; }

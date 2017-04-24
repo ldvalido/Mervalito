@@ -141,6 +141,49 @@ declare namespace Mervalito.Administration {
     }
 }
 declare namespace Mervalito.Administration {
+    class SettingsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SettingsForm {
+        SettingName: Serenity.StringEditor;
+        SettingValue: Serenity.StringEditor;
+    }
+}
+declare namespace Mervalito.Administration {
+    interface SettingsRow {
+        IdSetting?: number;
+        SettingName?: string;
+        SettingValue?: string;
+    }
+    namespace SettingsRow {
+        const idProperty = "IdSetting";
+        const nameProperty = "SettingName";
+        const localTextPrefix = "Administration.Settings";
+        namespace Fields {
+            const IdSetting: any;
+            const SettingName: any;
+            const SettingValue: any;
+        }
+    }
+}
+declare namespace Mervalito.Administration {
+    namespace SettingsService {
+        const baseUrl = "Administration/Settings";
+        function Create(request: Serenity.SaveRequest<SettingsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SettingsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SettingsRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SettingsRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.Administration {
     interface TranslationItem {
         Key?: string;
         SourceText?: string;
@@ -510,6 +553,57 @@ declare namespace Mervalito.MasterData {
         function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
         function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<BondTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
         function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<BondTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CautionForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface CautionForm {
+        Days: Serenity.IntegerEditor;
+        IdCurrency: Serenity.IntegerEditor;
+        Percentage: Serenity.DecimalEditor;
+    }
+}
+declare namespace Mervalito.MasterData {
+    interface CautionRow {
+        IdCaution?: number;
+        Days?: number;
+        IdCurrency?: number;
+        Percentage?: number;
+        IdCurrencyDescription?: string;
+        IdCurrencySymbol?: string;
+        IdCurrencyRate?: number;
+    }
+    namespace CautionRow {
+        const idProperty = "IdCaution";
+        const localTextPrefix = "MasterData.Caution";
+        namespace Fields {
+            const IdCaution: any;
+            const Days: any;
+            const IdCurrency: any;
+            const Percentage: any;
+            const IdCurrencyDescription: string;
+            const IdCurrencySymbol: string;
+            const IdCurrencyRate: string;
+        }
+    }
+}
+declare namespace Mervalito.MasterData {
+    namespace CautionService {
+        const baseUrl = "MasterData/Caution";
+        function Create(request: Serenity.SaveRequest<CautionRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CautionRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CautionRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CautionRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -1101,6 +1195,79 @@ declare namespace Mervalito.Administration {
     }
 }
 declare namespace Mervalito.Administration {
+    class SettingsDialog extends Serenity.EntityDialog<SettingsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SettingsForm;
+        updateInterface(): void;
+    }
+}
+declare namespace Mervalito.Common {
+    class GridEditorBase<TEntity> extends Serenity.EntityGrid<TEntity, any> implements Serenity.IGetEditValue, Serenity.ISetEditValue {
+        protected getIdProperty(): string;
+        protected nextId: number;
+        constructor(container: JQuery);
+        protected id(entity: TEntity): any;
+        protected getNextId(): string;
+        protected setNewId(entity: TEntity): void;
+        protected save(opt: Serenity.ServiceOptions<any>, callback: (r: Serenity.ServiceResponse) => void): void;
+        protected deleteEntity(id: number): boolean;
+        protected validateEntity(row: TEntity, id: number): boolean;
+        protected setEntities(items: TEntity[]): void;
+        protected getNewEntity(): TEntity;
+        protected getButtons(): Serenity.ToolButton[];
+        protected editItem(entityOrId: any): void;
+        getEditValue(property: any, target: any): void;
+        setEditValue(source: any, property: any): void;
+        value: TEntity[];
+        protected getGridCanLoad(): boolean;
+        protected usePager(): boolean;
+        protected getInitialTitle(): any;
+        protected createQuickSearchInput(): void;
+    }
+}
+declare namespace Mervalito.Administration {
+    class SettingsEditor extends Common.GridEditorBase<SettingsRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SettingsEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.Common {
+    class GridEditorDialog<TEntity> extends Serenity.EntityDialog<TEntity, any> {
+        protected getIdProperty(): string;
+        onSave: (options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void) => void;
+        onDelete: (options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void) => void;
+        destroy(): void;
+        protected updateInterface(): void;
+        protected saveHandler(options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void): void;
+        protected deleteHandler(options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void): void;
+    }
+}
+declare namespace Mervalito.Administration {
+    class SettingsEditorDialog extends Common.GridEditorDialog<SettingsRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: SettingsForm;
+    }
+}
+declare namespace Mervalito.Administration {
+    class SettingsGrid extends Serenity.EntityGrid<SettingsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SettingsDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        getButtons(): any[];
+    }
+}
+declare namespace Mervalito.Administration {
     class TranslationGrid extends Serenity.EntityGrid<TranslationItem, any> {
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
@@ -1299,41 +1466,6 @@ declare namespace Mervalito.Common {
         function createToolButton(options: ExcelExportOptions): Serenity.ToolButton;
     }
 }
-declare namespace Mervalito.Common {
-    class GridEditorBase<TEntity> extends Serenity.EntityGrid<TEntity, any> implements Serenity.IGetEditValue, Serenity.ISetEditValue {
-        protected getIdProperty(): string;
-        protected nextId: number;
-        constructor(container: JQuery);
-        protected id(entity: TEntity): any;
-        protected getNextId(): string;
-        protected setNewId(entity: TEntity): void;
-        protected save(opt: Serenity.ServiceOptions<any>, callback: (r: Serenity.ServiceResponse) => void): void;
-        protected deleteEntity(id: number): boolean;
-        protected validateEntity(row: TEntity, id: number): boolean;
-        protected setEntities(items: TEntity[]): void;
-        protected getNewEntity(): TEntity;
-        protected getButtons(): Serenity.ToolButton[];
-        protected editItem(entityOrId: any): void;
-        getEditValue(property: any, target: any): void;
-        setEditValue(source: any, property: any): void;
-        value: TEntity[];
-        protected getGridCanLoad(): boolean;
-        protected usePager(): boolean;
-        protected getInitialTitle(): any;
-        protected createQuickSearchInput(): void;
-    }
-}
-declare namespace Mervalito.Common {
-    class GridEditorDialog<TEntity> extends Serenity.EntityDialog<TEntity, any> {
-        protected getIdProperty(): string;
-        onSave: (options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void) => void;
-        onDelete: (options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void) => void;
-        destroy(): void;
-        protected updateInterface(): void;
-        protected saveHandler(options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void): void;
-        protected deleteHandler(options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void): void;
-    }
-}
 declare namespace Mervalito.LanguageList {
     function getValue(): string[][];
 }
@@ -1499,6 +1631,40 @@ declare namespace Mervalito.MasterData {
     }
 }
 declare namespace Mervalito.MasterData {
+    class CautionDialog extends Serenity.EntityDialog<CautionRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected form: CautionForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CautionEditor extends Common.GridEditorBase<CautionRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CautionEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CautionEditorDialog extends Common.GridEditorDialog<CautionRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected form: CautionForm;
+    }
+}
+declare namespace Mervalito.MasterData {
+    class CautionGrid extends Serenity.EntityGrid<CautionRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CautionDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace Mervalito.MasterData {
     class CurrencyDialog extends Serenity.EntityDialog<CurrencyRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -1625,6 +1791,7 @@ declare namespace Mervalito.MasterData {
         protected getLocalTextPrefix(): string;
         protected getService(): string;
         constructor(container: JQuery);
+        getButtons(): Serenity.ToolButton[];
     }
 }
 declare namespace Mervalito.MasterData {

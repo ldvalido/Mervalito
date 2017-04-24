@@ -21,10 +21,13 @@ namespace Mervalito.MasterData.Columns
         public String Name { get; set; }
         [Width(100)]
         public DateTime AmortizationDate { get; set; }
+        [DisplayFormat("0.000%")]
         public Double AmortizationAmmount { get; set; }
         [Width(100)]
         public DateTime RentDate { get; set; }
+        [DisplayFormat("0.000%")]
         public Double RentAmmount { get; set; }
+        [DisplayFormat("0.00")]
         public Double Price { get; set; }
         public Double Tir { get; set; }
         [Width(100)]

@@ -1610,6 +1610,22 @@
     <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingDialog.ts" />
     <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingEditor.ts" />
     <TypeScriptCompile Include="Modules\MasterData\BondRating\BondRatingEditorDialog.ts" />
+    <Content Include="Modules\Administration\Settings\SettingsIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Administration.SettingsRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Administration.SettingsService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Administration.SettingsForm.ts" />
+    <TypeScriptCompile Include="Modules\Administration\Settings\SettingsGrid.ts" />
+    <TypeScriptCompile Include="Modules\Administration\Settings\SettingsDialog.ts" />
+    <TypeScriptCompile Include="Modules\Administration\Settings\SettingsEditor.ts" />
+    <TypeScriptCompile Include="Modules\Administration\Settings\SettingsEditorDialog.ts" />
+    <Content Include="Modules\MasterData\Caution\CautionIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.CautionRow.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.CautionService.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\MasterData.CautionForm.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Caution\CautionGrid.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Caution\CautionDialog.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Caution\CautionEditor.ts" />
+    <TypeScriptCompile Include="Modules\MasterData\Caution\CautionEditorDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1846,6 +1862,18 @@
     <Compile Include="Modules\MasterData\BondRating\BondRatingRepository.cs" />
     <Compile Include="Modules\MasterData\BondRating\BondRatingEndpoint.cs" />
     <Compile Include="Modules\MasterData\BondRating\BondRatingPage.cs" />
+    <Compile Include="Modules\Administration\Settings\SettingsRow.cs" />
+    <Compile Include="Modules\Administration\Settings\SettingsColumns.cs" />
+    <Compile Include="Modules\Administration\Settings\SettingsForm.cs" />
+    <Compile Include="Modules\Administration\Settings\SettingsRepository.cs" />
+    <Compile Include="Modules\Administration\Settings\SettingsEndpoint.cs" />
+    <Compile Include="Modules\Administration\Settings\SettingsPage.cs" />
+    <Compile Include="Modules\MasterData\Caution\CautionRow.cs" />
+    <Compile Include="Modules\MasterData\Caution\CautionColumns.cs" />
+    <Compile Include="Modules\MasterData\Caution\CautionForm.cs" />
+    <Compile Include="Modules\MasterData\Caution\CautionRepository.cs" />
+    <Compile Include="Modules\MasterData\Caution\CautionEndpoint.cs" />
+    <Compile Include="Modules\MasterData\Caution\CautionPage.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

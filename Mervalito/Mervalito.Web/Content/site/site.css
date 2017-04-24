@@ -7093,6 +7093,18 @@ section.content > .s-DataGrid {
 .s-PermissionCheckEditor .effective-permission.deny {
   background-image: url(../serenity/images/slash.png);
 }
+.s-Administration-SettingsDialog > .size {
+  width: 650px;
+}
+.s-Administration-SettingsDialog .caption {
+  width: 150px;
+}
+.s-Administration-SettingsDialog > .size {
+  width: 650px;
+}
+.s-Administration-SettingsDialog .caption {
+  width: 150px;
+}
 /*Default styles for login/register pages*/
 .page-content .s-LoginPanel {
   padding: 30px 20px;
@@ -7603,5 +7615,11 @@ section.content > .s-DataGrid {
   width: 650px;
 }
 .s-MasterData-TitleDialog .caption {
+  width: 150px;
+}
+.s-MasterData-CautionDialog > .size {
+  width: 650px;
+}
+.s-MasterData-CautionDialog .caption {
   width: 150px;
 }
