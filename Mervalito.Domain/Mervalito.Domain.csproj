@@ -46,12 +46,14 @@
   <ItemGroup>
     <Compile Include="Base\CrudService.cs" />
     <Compile Include="Base\ICrudService.cs" />
+    <Compile Include="Contract\ICautionService.cs" />
     <Compile Include="Contract\ICompanyManagerService.cs" />
     <Compile Include="Contract\ICurrencyStorage.cs" />
     <Compile Include="Contract\IMutualFundService.cs" />
     <Compile Include="Contract\ISettingService.cs" />
     <Compile Include="Contract\ITitleService.cs" />
     <Compile Include="DomainConst.cs" />
+    <Compile Include="Implementation\CautionService.cs" />
     <Compile Include="Implementation\CompanyManagerService.cs" />
     <Compile Include="Implementation\CurrencyService.cs" />
     <Compile Include="Implementation\MutualFundService.cs" />

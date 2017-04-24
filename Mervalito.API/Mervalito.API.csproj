@@ -117,6 +117,7 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Base\BaseCRUDApiController.cs" />
+    <Compile Include="Controllers\CautionController.cs" />
     <Compile Include="Controllers\CompanyManagerController.cs" />
     <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\MutualFundController.cs" />
