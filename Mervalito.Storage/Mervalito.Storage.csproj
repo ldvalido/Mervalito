@@ -55,6 +55,7 @@
     <Compile Include="Implementation\CompanyManagerStorage.cs" />
     <Compile Include="Implementation\CurrencyStorage.cs" />
     <Compile Include="Implementation\MutualFundStorage.cs" />
+    <Compile Include="Implementation\SettingStorage.cs" />
     <Compile Include="Implementation\TitleStorage.cs" />
     <Compile Include="Mapping\BondTypeMapping.cs" />
     <Compile Include="Mapping\CompanyManagerMapping.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Mapping\MutualFundMapping.cs" />
     <Compile Include="Mapping\PaymentPeriodMapping.cs" />
     <Compile Include="Mapping\RentTypeMapping.cs" />
+    <Compile Include="Mapping\SettingMapping.cs" />
     <Compile Include="Mapping\TitleMapping.cs" />
     <Compile Include="Mapping\TitleTypeMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

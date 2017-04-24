@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using Mervalito.API.Base;
 using Mervalito.Domain.Base;
@@ -45,6 +43,17 @@ namespace Mervalito.API.Controllers
         public Currency Get(int idCurrency)
         {
             return crudService.Get(idCurrency);
+        }
+        /// <summary>
+        /// Gets the by symbol.
+        /// </summary>
+        /// <param name="symbol">The symbol.</param>
+        /// <returns></returns>
+        [Route("Currency/{symbol}")]
+        [HttpGet]
+        public Currency GetBySymbol(string symbol)
+        {
+            return crudService.GetBy(c => string.Compare(c.Symbol,symbol,StringComparison.CurrentCultureIgnoreCase) == 0);
         }
 
         /// <summary>

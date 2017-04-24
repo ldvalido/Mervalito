@@ -8,5 +8,6 @@ namespace Mervalito.Domain.Contract
     /// <seealso cref="Mervalito.Domain.Base.ICrudService{Mervalito.Model.Model.Title}" />
     public interface ITitleService:ICrudService<Title,int>
     {
+        bool UpdateRate();
     }
 }

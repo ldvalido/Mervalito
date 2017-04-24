@@ -65,6 +65,16 @@ namespace Mervalito.API.Controllers
             return _titleService.Update(title);
         }
         /// <summary>
+        /// Updates the rate.
+        /// </summary>
+        /// <returns></returns>
+        [Route("titles/updateRates")]
+        [HttpPut]
+        public bool UpdateRate()
+        {
+            return _titleService.UpdateRate();
+        }
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="titleService"></param>
